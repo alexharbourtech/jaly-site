@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>What We Do — Jaly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f7f7f5;--ink:#0a0a0a;--ink-2:#3a3a38;--ink-3:#777772;--ink-4:#b0b0aa;
+  --rule:#e8e8e4;--rule-2:#d0d0ca;--blue:#0047cc;--blue-dim:rgba(0,71,204,0.08);
+  --green:#1a7a3c;--amber:#a85c00;--purple:#5b21b6;--teal:#0f766e;
+  --r:2px;--f-sans:"Inter",system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--f-sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--white);border-bottom:1px solid var(--rule)}
+.n-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:var(--ink);text-decoration:none}
+.n-logo em{color:var(--blue);font-style:normal}
+.n-links{display:flex;gap:0;list-style:none}
+.n-links a{font-size:13px;font-weight:400;color:var(--ink-3);text-decoration:none;padding:0 14px;height:56px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}
+.n-links a:hover{color:var(--ink)}
+.n-links a.on{color:var(--ink);font-weight:500;border-bottom-color:var(--blue)}
+.n-btn{font-size:13px;font-weight:500;color:var(--white);background:var(--ink);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:var(--r);transition:background 0.12s}
+.n-btn:hover{background:var(--ink-2)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 48px}
+.hr{height:1px;background:var(--rule)}
+.tag{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
+.h1{font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.04;letter-spacing:-0.04em;color:var(--ink)}
+.h2{font-size:clamp(24px,3vw,38px);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--ink)}
+.h3{font-size:17px;font-weight:600;letter-spacing:-0.02em;color:var(--ink)}
+.body-lg{font-size:16px;font-weight:400;color:var(--ink-2);line-height:1.7}
+.body-md{font-size:14px;font-weight:400;color:var(--ink-2);line-height:1.7}
+.body-sm{font-size:13px;font-weight:400;color:var(--ink-3);line-height:1.65}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;border-radius:var(--r);padding:0 20px;height:40px;transition:all 0.12s}
+.btn-dark{background:var(--ink);color:var(--white)}
+.btn-dark:hover{background:var(--ink-2)}
+.btn-line{background:transparent;color:var(--ink-2);border:1px solid var(--rule-2)}
+.btn-line:hover{border-color:var(--ink-3);color:var(--ink)}
+.btn-white{background:var(--white);color:var(--ink)}
+.btn-white:hover{background:var(--off)}
+.btn-text{background:transparent;color:var(--blue);padding:0;height:auto;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:4px;text-decoration:none}
+.btn-text::after{content:"→";transition:transform 0.12s}
+.btn-text:hover::after{transform:translateX(3px)}
+.btn-text:hover{color:var(--ink)}
+.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
+.dot-green{background:var(--green)}.dot-blue{background:var(--blue)}.dot-amber{background:var(--amber)}.dot-grey{background:var(--ink-4)}.dot-purple{background:var(--purple)}.dot-teal{background:var(--teal)}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--ink-3)}
+.ph{padding:72px 0}
+.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
+.pg-header{padding:64px 0 56px;border-bottom:1px solid var(--rule)}
+.pg-tag{margin-bottom:14px}
+.pg-h{margin-bottom:16px}
+.pg-body{max-width:560px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
+.f-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
+.f-input,.f-select,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule-2);color:var(--ink);padding:10px 13px;font-family:var(--f-sans);font-size:13px;border-radius:var(--r);outline:none;transition:border-color 0.12s,background 0.12s;appearance:none}
+.f-input:focus,.f-select:focus,.f-ta:focus{border-color:var(--blue);background:var(--white)}
+.f-ta{min-height:100px;resize:vertical}
+.f-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23b0b0aa' d='M5 6L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
+.f-submit{width:100%;background:var(--ink);color:var(--white);border:none;padding:12px;font-family:var(--f-sans);font-size:13px;font-weight:500;border-radius:var(--r);cursor:pointer;margin-top:2px;transition:background 0.12s}
+.f-submit:hover{background:var(--ink-2)}
+.f-note{font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;line-height:1.5}
+.cta-band{background:var(--ink);padding:56px 0}
+.cta-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:48px}
+.cta-h{font-size:clamp(18px,2.2vw,28px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
+.cta-b{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:420px}
+footer{background:var(--ink);padding:56px 48px 32px;border-top:1px solid rgba(255,255,255,0.06)}
+.ft-inner{max-width:1040px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:24px}
+.ft-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:12px}
+.ft-logo em{color:var(--blue);font-style:normal}
+.ft-tagline{font-size:13px;color:rgba(255,255,255,0.32);line-height:1.65;max-width:210px;margin-bottom:20px}
+.ft-badge{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:100px;font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.32)}
+.ft-badge b{color:rgba(255,255,255,0.6);font-weight:600;margin-left:4px}
+.ft-col h5{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}
+.ft-col a:hover{color:rgba(255,255,255,0.75)}
+.ft-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ft-bottom p{font-size:12px;color:rgba(255,255,255,0.18)}
+
+.stage-bar{background:var(--off);border-bottom:1px solid var(--rule);padding:0 48px}
+.stage-bar-inner{max-width:1040px;margin:0 auto;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.stage-bar-inner::-webkit-scrollbar{display:none}
+.stage-pill{display:flex;align-items:center;gap:8px;padding:0 20px;height:48px;font-size:12px;font-weight:500;color:var(--ink-3);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap;transition:all 0.12s}
+.stage-pill:hover{color:var(--ink);border-bottom-color:var(--rule-2)}
+.stage-pill-num{font-size:10px;font-weight:700;color:var(--ink-4);letter-spacing:0.06em}
+.stage{padding:72px 0;border-bottom:1px solid var(--rule)}
+.stage-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.stage-num{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4);margin-bottom:12px}
+.callout{margin-top:24px;padding:16px 20px;background:var(--blue-dim);border-left:3px solid var(--blue)}
+.callout-title{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:0.04em;margin-bottom:6px;text-transform:uppercase}
+.callout-body{font-size:13px;color:var(--ink-2);line-height:1.65}
+.detail-list{list-style:none;display:flex;flex-direction:column}
+.detail-list li{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--rule);font-size:13px;color:var(--ink-2);line-height:1.5}
+.detail-list li:first-child{border-top:1px solid var(--rule)}
+.detail-list li::before{content:"";flex-shrink:0;width:4px;height:4px;border-radius:50%;background:var(--blue);margin-top:7px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.spec-cell{background:var(--white);padding:16px 18px}
+.spec-cell.full{grid-column:1/-1}
+.spec-cell-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4);margin-bottom:5px}
+.spec-cell-val{font-size:13px;color:var(--ink-2);line-height:1.5}
+.partner-note{padding:20px;border:1px solid var(--rule);display:flex;gap:14px;align-items:flex-start}
+.partner-bar{width:3px;flex-shrink:0;background:var(--rule-2);align-self:stretch;border-radius:2px;min-height:32px}
+.partner-text{font-size:13px;color:var(--ink-2);line-height:1.65}
+.partner-text strong{color:var(--ink);font-weight:600}
+.scope-list{display:flex;flex-direction:column;gap:6px}
+.scope-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border:1px solid var(--rule);font-size:13px;color:var(--ink-2);line-height:1.45}
+.scope-badge{font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;border-radius:100px;flex-shrink:0;white-space:nowrap}
+.sb-std{background:var(--off);color:var(--ink-4);border:1px solid var(--rule-2)}
+.sb-scoped{background:var(--blue-dim);color:var(--blue);border:1px solid rgba(0,71,204,0.2)}
+.support-bg{background:var(--off);padding:72px 0;border-top:1px solid var(--rule)}
+.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.support-items{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.support-item{background:var(--white);padding:18px 20px;display:grid;grid-template-columns:20px 1fr;gap:14px;align-items:flex-start}
+.support-dash{font-size:13px;color:var(--ink-4);padding-top:1px}
+.support-title{font-size:14px;font-weight:600;letter-spacing:-0.01em;margin-bottom:4px}
+.support-desc{font-size:13px;color:var(--ink-3);line-height:1.55}
+</style>
+</head>
+<body><nav><a href="index.html" class="n-logo">Jaly<em>.</em>ie</a><ul class="n-links"><li><a href="what-we-do.html" class='on'>What We Do</a></li><li><a href="projects.html">Projects</a></li><li><a href="use-cases.html">Use Cases</a></li><li><a href="construction.html">Construction</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="n-btn">Enquire Now</a></nav>
+<div class="ph">
+  <div class="ph-inner">
+    <div class="pg-header" style="padding-top:64px;padding-bottom:40px">
+      <div class="tag pg-tag">What We Do</div>
+      <h1 class="h1 pg-h">From initial<br>brief to<br>live system.</h1>
+      <p class="body-lg pg-body">Most smart system projects fail not because the technology is wrong, but because nobody designed the system properly in the first place. Jaly covers the full journey — every project scoped before it is priced, every system tested before it is handed over.</p>
+    </div>
+  </div>
+</div>
+
+<div class="stage-bar">
+  <div class="stage-bar-inner">
+    <a href="#design" class="stage-pill"><span class="stage-pill-num">01</span> System Design</a>
+    <a href="#supply" class="stage-pill"><span class="stage-pill-num">02</span> Hardware Supply</a>
+    <a href="#install" class="stage-pill"><span class="stage-pill-num">03</span> Installation</a>
+    <a href="#commission" class="stage-pill"><span class="stage-pill-num">04</span> Commissioning</a>
+  </div>
+</div>
+
+<div class="stage" id="design">
+  <div class="stage-inner">
+    <div>
+      <div class="stage-num">Stage 01</div>
+      <h2 class="h2" style="margin-bottom:16px">System Design</h2>
+      <p class="body-md" style="margin-bottom:14px">Every project begins with a conversation — formal or informal, on site or remote. Once the intent is established and the brief makes sense, we visit to scope the project properly. We will not design a system from drawings alone.</p>
+      <p class="body-md">The deliverable is a formal document: the system architecture, required hardware with quantities, indicative setup guidance, and associated hardware costs. It is a working document, not a sales proposal.</p>
+      <div class="callout" style="margin-top:24px">
+        <div class="callout-title">Design Fee Rebate</div>
+        <p class="callout-body">System design is a paid engagement. Clients who proceed with Shelly hardware through Jaly receive a rebate against their hardware order — effectively recovering a portion of the design cost. Rebate terms confirmed at the outset.</p>
+      </div>
+    </div>
+    <div>
+      <p class="tag" style="margin-bottom:16px">What You Receive</p>
+      <ul class="detail-list">
+        <li>System architecture specific to your site and objectives</li>
+        <li>Full hardware specification — device types and quantities</li>
+        <li>Network and integration planning — WiFi, LoRa, gateway requirements</li>
+        <li>Indicative wiring and setup guidance for your installation team</li>
+        <li>Hardware costs with volume pricing applied where relevant</li>
+        <li>Coordination with your M&amp;E consultant or contractor where required</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="stage" id="supply">
+  <div class="stage-inner">
+    <div>
+      <p class="tag" style="margin-bottom:16px">Supply Details</p>
+      <div class="spec-grid">
+        <div class="spec-cell"><div class="spec-cell-label">Status</div><div class="spec-cell-val">Authorised Shelly B2B Distributor — Ireland</div></div>
+        <div class="spec-cell"><div class="spec-cell-label">Stock</div><div class="spec-cell-val">Held locally. Available for rapid dispatch.</div></div>
+        <div class="spec-cell"><div class="spec-cell-label">Warranty</div><div class="spec-cell-val">Full manufacturer warranty. Up to 5 years on Pro range.</div></div>
+        <div class="spec-cell"><div class="spec-cell-label">Pricing</div><div class="spec-cell-val">Shelly RRP. Volume discounts on committed order size.</div></div>
+        <div class="spec-cell full"><div class="spec-cell-label">Mid-Project Flexibility</div><div class="spec-cell-val">Stock exchanges accommodated within reason where scope changes during delivery.</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="stage-num">Stage 02</div>
+      <h2 class="h2" style="margin-bottom:16px">Hardware Supply</h2>
+      <p class="body-md" style="margin-bottom:14px">As Ireland's authorised B2B distributor for Shelly, Jaly supplies genuine, warranty-backed hardware directly to your project or installation team. Every device sourced through the manufacturer's authorised channel.</p>
+      <p class="body-md" style="margin-bottom:14px">Local stock held across Ireland. Volume discounts calculated on committed order size — not just what has shipped — which benefits larger projects from the outset.</p>
+      <p class="body-md">Where scope changes mid-project, we accommodate reasonable stock exchanges to keep delivery on track.</p>
+    </div>
+  </div>
+</div>
+
+<div class="stage" id="install">
+  <div class="stage-inner">
+    <div>
+      <div class="stage-num">Stage 03</div>
+      <h2 class="h2" style="margin-bottom:16px">Installation</h2>
+      <p class="body-md" style="margin-bottom:14px">Physical installation is not a core Jaly service, but it is never left unmanaged. We work with a trusted network of electrical and M&amp;E contractors who carry out installations to the standard our commissioning process requires.</p>
+      <p class="body-md" style="margin-bottom:14px">Where a client has an existing contractor relationship, we are happy to work alongside them.</p>
+      <a href="contact.html" class="btn-text" style="margin-top:8px">Discuss your installation requirements</a>
+    </div>
+    <div>
+      <p class="tag" style="margin-bottom:16px">How It Works</p>
+      <div class="partner-note" style="margin-bottom:16px">
+        <div class="partner-bar"></div>
+        <p class="partner-text"><strong>Jaly coordinates, partners deliver.</strong> We manage the relationship between design, hardware supply, and physical installation — so there is no gap between what was specified and what gets installed.</p>
+      </div>
+      <ul class="detail-list">
+        <li>Wiring diagrams and installation documentation provided</li>
+        <li>Jaly available by phone throughout the installation phase</li>
+        <li>Trusted partner network available where required</li>
+        <li>Existing contractor relationships accommodated</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="stage" id="commission" style="border-bottom:none">
+  <div class="stage-inner">
+    <div>
+      <div class="stage-num">Stage 04</div>
+      <h2 class="h2" style="margin-bottom:16px">Commissioning</h2>
+      <p class="body-md" style="margin-bottom:14px">Jaly attends site to commission every system. Devices enrolled into Shelly Cloud for single-site projects, or Fleet Manager for commercial and multi-site deployments.</p>
+      <p class="body-md" style="margin-bottom:14px">Fleet Manager allows configurations to be pre-loaded and pushed to devices as they come online — WiFi credentials, groupings, automation rules — significantly reducing commissioning time on large rollouts.</p>
+      <p class="body-md">Scope defines what commissioning includes. We will not quote until the scope is agreed.</p>
+    </div>
+    <div>
+      <p class="tag" style="margin-bottom:16px">Scope Defines the Engagement</p>
+      <div class="scope-list">
+        <div class="scope-item"><span class="scope-badge sb-std">Standard</span>Devices enrolled, online, grouped per agreed schedule</div>
+        <div class="scope-item"><span class="scope-badge sb-std">Standard</span>Manual control fully functional across all devices</div>
+        <div class="scope-item"><span class="scope-badge sb-std">Standard</span>Basic handover documentation</div>
+        <div class="scope-item"><span class="scope-badge sb-scoped">Per Scope</span>Automation logic built to provided requirements</div>
+        <div class="scope-item"><span class="scope-badge sb-scoped">Per Scope</span>Energy monitoring, dashboards, and data export</div>
+        <div class="scope-item"><span class="scope-badge sb-scoped">Per Scope</span>Custom UI via API or WebSocket</div>
+        <div class="scope-item"><span class="scope-badge sb-scoped">Per Scope</span>MQTT server integration for third-party data systems</div>
+        <div class="scope-item"><span class="scope-badge sb-scoped">Per Scope</span>LoRa connectivity for devices beyond WiFi range</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="support-bg">
+  <div class="ph-inner">
+    <div class="support-grid">
+      <div>
+        <div class="tag" style="margin-bottom:14px">After Handover</div>
+        <h2 class="h2" style="margin-bottom:16px">Ongoing support.</h2>
+        <p class="body-md">Managed support agreements available for clients with ongoing requirements — covering system monitoring, configuration changes, and technical assistance.</p>
+      </div>
+      <div class="support-items">
+        <div class="support-item"><span class="support-dash">—</span><div><div class="support-title">Basic Documentation</div><p class="support-desc">Included with every commissioning. Covers core operation and device management.</p></div></div>
+        <div class="support-item"><span class="support-dash">—</span><div><div class="support-title">Installation Support</div><p class="support-desc">Jaly available by phone during installation to resolve queries and keep projects moving.</p></div></div>
+        <div class="support-item"><span class="support-dash">—</span><div><div class="support-title">Managed Support Agreements</div><p class="support-desc">Available for clients with ongoing needs. Scoped and priced per engagement.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="cta-inner">
+    <div><h2 class="cta-h">Every project starts with a scoping conversation.</h2><p class="cta-b">Tell us what you are working with — the site, the objective, the scale. We will tell you honestly what is involved.</p></div>
+    <a href="contact.html" class="btn btn-white">Start a Conversation →</a>
+  </div>
+</div>
+<footer>
+<div class="ft-inner">
+  <div class="ft-top">
+    <div><a href="index.html" class="ft-logo">Jaly<em>.</em>ie</a><p class="ft-tagline">Intelligent building systems designed, supplied, and commissioned across Ireland.</p><div class="ft-badge">Authorised Shelly<b>B2B Partner</b></div></div>
+    <div class="ft-col"><h5>Services</h5><ul><li><a href="what-we-do.html">System Design</a></li><li><a href="what-we-do.html">Hardware Supply</a></li><li><a href="what-we-do.html">Installation</a></li><li><a href="what-we-do.html">Commissioning</a></li></ul></div>
+    <div class="ft-col"><h5>Sectors</h5><ul>
+    <li><a href="construction.html">Construction</a></li>
+    <li><a href="use-cases.html">Hospitality</a></li>
+    <li><a href="use-cases.html">Commercial</a></li>
+    <li><a href="use-cases.html">All Use Cases</a></li>
+  </ul></div>
+  </div>
+  <div class="ft-bottom"><p>&copy; 2025 Jaly.ie &mdash; All rights res
