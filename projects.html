@@ -8,298 +8,190 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --white:#ffffff;--off:#f7f7f5;--ink:#0a0a0a;--ink-2:#3a3a38;--ink-3:#777772;--ink-4:#b0b0aa;
-  --rule:#e8e8e4;--rule-2:#d0d0ca;--blue:#0047cc;--blue-dim:rgba(0,71,204,0.08);
-  --green:#1a7a3c;--amber:#a85c00;--purple:#5b21b6;--teal:#0f766e;
-  --r:2px;--f-sans:"Inter",system-ui,sans-serif;
+  --navy:#0a2d6b;--blue:#7799f3;--blue2:#6a9af7;--cyan:#5dc0e5;
+  --white:#ffffff;--off:#f4f6fb;--ink:#0a0a0a;--ink2:#2a2a2a;--ink3:#555555;--ink4:#999999;
+  --rule:#e2e6f0;--rule2:#ccd3e8;--r:2px;--f:"Inter",system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--ink);font-family:var(--f-sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--white);border-bottom:1px solid var(--rule)}
-.n-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:var(--ink);text-decoration:none}
-.n-logo em{color:var(--blue);font-style:normal}
+body{background:var(--white);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.1)}
+.n-logo{font-size:20px;font-weight:800;letter-spacing:-0.04em;color:var(--white);text-decoration:none;font-style:italic}
 .n-links{display:flex;gap:0;list-style:none}
-.n-links a{font-size:13px;font-weight:400;color:var(--ink-3);text-decoration:none;padding:0 14px;height:56px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}
-.n-links a:hover{color:var(--ink)}
-.n-links a.on{color:var(--ink);font-weight:500;border-bottom-color:var(--blue)}
-.n-btn{font-size:13px;font-weight:500;color:var(--white);background:var(--ink);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:var(--r);transition:background 0.12s}
-.n-btn:hover{background:var(--ink-2)}
+.n-links a{font-size:13px;font-weight:400;color:rgba(255,255,255,0.65);text-decoration:none;padding:0 14px;height:60px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}
+.n-links a:hover{color:var(--white)}
+.n-links a.on{color:var(--white);font-weight:600;border-bottom-color:var(--cyan)}
+.n-btn{font-size:13px;font-weight:600;color:var(--navy);background:var(--cyan);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:var(--r);transition:background 0.12s}
+.n-btn:hover{background:var(--blue2);color:var(--white)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 48px}
+.ph{padding:64px 0}.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
 .hr{height:1px;background:var(--rule)}
-.tag{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.h1{font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.04;letter-spacing:-0.04em;color:var(--ink)}
-.h2{font-size:clamp(24px,3vw,38px);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--ink)}
-.h3{font-size:17px;font-weight:600;letter-spacing:-0.02em;color:var(--ink)}
-.body-lg{font-size:16px;font-weight:400;color:var(--ink-2);line-height:1.7}
-.body-md{font-size:14px;font-weight:400;color:var(--ink-2);line-height:1.7}
-.body-sm{font-size:13px;font-weight:400;color:var(--ink-3);line-height:1.65}
+.h1{font-size:clamp(36px,5vw,58px);font-weight:800;line-height:1.04;letter-spacing:-0.04em}
+.h2{font-size:clamp(22px,3vw,34px);font-weight:700;line-height:1.1;letter-spacing:-0.03em}
+.h3{font-size:16px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px}
+.body-lg{font-size:16px;color:var(--ink2);line-height:1.75}
+.body-md{font-size:14px;color:var(--ink2);line-height:1.75}
+.body-sm{font-size:13px;color:var(--ink3);line-height:1.65}
 .btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;border-radius:var(--r);padding:0 20px;height:40px;transition:all 0.12s}
-.btn-dark{background:var(--ink);color:var(--white)}
-.btn-dark:hover{background:var(--ink-2)}
-.btn-line{background:transparent;color:var(--ink-2);border:1px solid var(--rule-2)}
-.btn-line:hover{border-color:var(--ink-3);color:var(--ink)}
-.btn-white{background:var(--white);color:var(--ink)}
-.btn-white:hover{background:var(--off)}
-.btn-text{background:transparent;color:var(--blue);padding:0;height:auto;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:4px;text-decoration:none}
-.btn-text::after{content:"→";transition:transform 0.12s}
-.btn-text:hover::after{transform:translateX(3px)}
-.btn-text:hover{color:var(--ink)}
-.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
-.dot-green{background:var(--green)}.dot-blue{background:var(--blue)}.dot-amber{background:var(--amber)}.dot-grey{background:var(--ink-4)}.dot-purple{background:var(--purple)}.dot-teal{background:var(--teal)}
-.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--ink-3)}
-.ph{padding:72px 0}
-.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.pg-header{padding:64px 0 56px;border-bottom:1px solid var(--rule)}
-.pg-tag{margin-bottom:14px}
-.pg-h{margin-bottom:16px}
-.pg-body{max-width:560px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
-.f-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.f-input,.f-select,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule-2);color:var(--ink);padding:10px 13px;font-family:var(--f-sans);font-size:13px;border-radius:var(--r);outline:none;transition:border-color 0.12s,background 0.12s;appearance:none}
-.f-input:focus,.f-select:focus,.f-ta:focus{border-color:var(--blue);background:var(--white)}
-.f-ta{min-height:100px;resize:vertical}
-.f-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23b0b0aa' d='M5 6L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
-.f-submit{width:100%;background:var(--ink);color:var(--white);border:none;padding:12px;font-family:var(--f-sans);font-size:13px;font-weight:500;border-radius:var(--r);cursor:pointer;margin-top:2px;transition:background 0.12s}
-.f-submit:hover{background:var(--ink-2)}
-.f-note{font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;line-height:1.5}
-.cta-band{background:var(--ink);padding:56px 0}
+.btn-navy{background:var(--navy);color:var(--white)}.btn-navy:hover{background:#0d3a82}
+.btn-line{background:transparent;color:var(--ink2);border:1px solid var(--rule2)}.btn-line:hover{border-color:var(--navy);color:var(--navy)}
+.btn-cyan{background:var(--cyan);color:var(--navy);font-weight:600}.btn-cyan:hover{background:var(--blue2);color:var(--white)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+/* Band label — matches PDF section headers */
+.band{background:var(--off);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin-bottom:28px}
+.band-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:10px}
+.band-bar{width:4px;height:20px;background:var(--navy);border-radius:2px;flex-shrink:0}
+.band-txt{font-size:13px;font-weight:700;color:var(--navy)}
+/* Stat band */
+.stat-band{background:var(--navy);padding:36px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1)}
+.stat-cell{background:var(--navy);padding:24px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;letter-spacing:-0.04em;color:var(--cyan);margin-bottom:4px}
+.stat-lbl{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
+/* Cards */
+.card{background:var(--white);border:1px solid var(--rule);padding:22px}
+.card-off{background:var(--off);border:1px solid var(--rule);padding:22px}
+.badge{display:inline-flex;padding:2px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.badge-navy{background:var(--navy);color:var(--white)}
+.badge-blue{background:var(--blue);color:var(--white)}
+.badge-cyan{background:var(--cyan);color:var(--navy)}
+/* Hero */
+.hero{background:var(--navy);padding:72px 0 64px}
+/* CTA */
+.cta-band{background:var(--navy);padding:56px 0}
 .cta-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:48px}
-.cta-h{font-size:clamp(18px,2.2vw,28px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
-.cta-b{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:420px}
-footer{background:var(--ink);padding:56px 48px 32px;border-top:1px solid rgba(255,255,255,0.06)}
+.cta-h{font-size:clamp(18px,2.2vw,26px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
+.cta-b{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
+/* Footer */
+footer{background:#040f24;padding:48px 48px 28px}
 .ft-inner{max-width:1040px;margin:0 auto}
-.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:24px}
-.ft-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:12px}
-.ft-logo em{color:var(--blue);font-style:normal}
-.ft-tagline{font-size:13px;color:rgba(255,255,255,0.32);line-height:1.65;max-width:210px;margin-bottom:20px}
-.ft-badge{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:100px;font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.32)}
-.ft-badge b{color:rgba(255,255,255,0.6);font-weight:600;margin-left:4px}
-.ft-col h5{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:20px}
+.ft-logo{font-size:20px;font-weight:800;letter-spacing:-0.04em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:10px;font-style:italic}
+.ft-tag{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.65;max-width:210px;margin-bottom:16px}
+.ft-badge{display:inline-flex;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:100px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.ft-col h5{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:14px}
 .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}
-.ft-col a:hover{color:rgba(255,255,255,0.75)}
-.ft-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.ft-bottom p{font-size:12px;color:rgba(255,255,255,0.18)}
-
-.prj-list{display:flex;flex-direction:column;gap:0}
-.prj-entry{border-bottom:1px solid var(--rule);padding:56px 0}
-.prj-entry:first-child{border-top:1px solid var(--rule)}
-.prj-entry-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.prj-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap}
-.prj-sector-tag{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.prj-bar{width:24px;height:2px;border-radius:1px;flex-shrink:0}
-.prj-bar.blue{background:var(--blue)}.prj-bar.green{background:var(--green)}.prj-bar.amber{background:var(--amber)}.prj-bar.purple{background:var(--purple)}.prj-bar.teal{background:var(--teal)}
-.prj-title{font-size:clamp(20px,2.5vw,30px);font-weight:700;letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px}
-.prj-problem{font-size:14px;font-style:italic;color:var(--ink-3);line-height:1.65;padding:14px 18px;border-left:3px solid var(--rule-2);margin-bottom:20px}
-.prj-narrative{font-size:14px;color:var(--ink-2);line-height:1.75}
-.prj-narrative p+p{margin-top:12px}
-.prj-status{margin-top:20px}
-.prj-detail-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4);margin-bottom:12px}
-.prj-detail-list{list-style:none;display:flex;flex-direction:column}
-.prj-detail-list li{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule);font-size:13px;color:var(--ink-2);line-height:1.5}
-.prj-detail-list li:first-child{border-top:1px solid var(--rule)}
-.prj-detail-list li::before{content:"";flex-shrink:0;width:3px;height:3px;border-radius:50%;background:var(--blue);margin-top:8px}
-.prj-meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:24px}
-.prj-meta-cell{background:var(--white);padding:12px 14px}
-.prj-meta-label{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-4);margin-bottom:4px}
-.prj-meta-val{font-size:13px;color:var(--ink-2)}
-.prj-outro{padding:40px 0;border-top:1px solid var(--rule)}
+.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}.ft-col a:hover{color:rgba(255,255,255,0.8)}
+.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ft-bot p{font-size:12px;color:rgba(255,255,255,0.16)}
+/* Forms */
+.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f-lbl{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4)}
+.f-inp,.f-sel,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule2);color:var(--ink);padding:10px 13px;font-family:var(--f);font-size:13px;border-radius:var(--r);outline:none;transition:border-color 0.12s}
+.f-inp:focus,.f-sel:focus,.f-ta:focus{border-color:var(--blue)}
+.f-ta{min-height:110px;resize:vertical}
+.f-sub{width:100%;background:var(--navy);color:var(--white);border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:600;border-radius:var(--r);cursor:pointer;margin-top:4px;transition:background 0.12s}.f-sub:hover{background:#0d3a82}
 </style>
 </head>
-<body><nav><a href="index.html" class="n-logo">Jaly<em>.</em>ie</a><ul class="n-links"><li><a href="what-we-do.html">What We Do</a></li><li><a href="projects.html" class='on'>Projects</a></li><li><a href="use-cases.html">Use Cases</a></li><li><a href="construction.html">Construction</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="n-btn">Enquire Now</a></nav>
-<div class="ph" style="padding-bottom:0">
+<body>
+<nav>
+  <a href="index.html" class="n-logo">jaly</a>
+  <ul class="n-links">
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="projects.html"  class='on'>Projects</a></li>
+    <li><a href="use-cases.html">Use Cases</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="construction.html">Construction</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="n-btn">Enquire Now</a>
+</nav>
+<div class="hero">
+  <div class="wrap">
+    <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px">Live Deployments</p>
+    <h1 class="h1" style="color:var(--white);margin-bottom:20px">Projects.</h1>
+    <p class="body-lg" style="color:rgba(255,255,255,0.65);max-width:500px">Live deployments across construction, hospitality, residential, and energy. Client identities are withheld unless permission has been given.</p>
+  </div>
+</div>
+
+<div class="ph">
   <div class="ph-inner">
-    <div class="pg-header">
-      <div class="tag pg-tag">Projects</div>
-      <h1 class="h1 pg-h">Work across sectors,<br>delivered properly.</h1>
-      <p class="body-lg pg-body">Every project here began with a problem — an energy bill nobody could explain, a system nobody could control, or a brief that nobody else knew how to specify. The platform is the same in each case. What changes is the application.</p>
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Active Deployments</span></div></div>
+    <div style="display:flex;flex-direction:column;gap:1px;background:var(--rule)">
+
+      <div style="background:var(--white);padding:36px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <div><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px">Construction &mdash; Active</p><h2 class="h2" style="font-size:22px">Tier One Irish Contractor &mdash; National Site Estate</h2></div>
+          <span class="badge badge-cyan">Live</span>
+        </div>
+        <div class="two">
+          <p class="body-md">Client suspected high out-of-hours electricity usage and reached out seeking assistance in identifying and reducing wastage. A single meter was supplied to prove the wasted volume and calculate potential savings. Following proof of concept, a pilot was deployed. The full rollout covers 50+ sites nationally, with annual savings estimated in the millions. Jaly are providing Design, Supply and Commissioning Services for this project.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)">
+            <div style="background:var(--off);padding:18px;text-align:center"><div style="font-size:22px;font-weight:800;color:var(--navy)">&euro;1,500+</div><div class="body-sm" style="margin-top:4px">Weekly savings<br>per site</div></div>
+            <div style="background:var(--off);padding:18px;text-align:center"><div style="font-size:22px;font-weight:800;color:var(--navy)">50+</div><div class="body-sm" style="margin-top:4px">Sites in<br>national rollout</div></div>
+            <div style="background:var(--off);padding:18px;text-align:center"><div style="font-size:22px;font-weight:800;color:var(--navy)">4,000+</div><div class="body-sm" style="margin-top:4px">Shelly devices<br>planned</div></div>
+            <div style="background:var(--off);padding:18px;text-align:center"><div style="font-size:22px;font-weight:800;color:var(--navy)">1&ndash;4 wks</div><div class="body-sm" style="margin-top:4px">Typical payback<br>period</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--off);padding:36px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <div><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px">Hospitality &mdash; In Development</p><h2 class="h2" style="font-size:22px">100-Room Hotel &mdash; Heating Management</h2></div>
+          <span class="badge badge-navy">In Development</span>
+        </div>
+        <p class="body-md" style="max-width:680px">First Irish hotel deployment of a Shelly-based multi-zone heating management system. The property has three heating types across 100 rooms &mdash; gas TRVs, electric wall heaters, and underfloor heating mats. A single Fleet Manager dashboard provides centralised visibility and control. Occupancy integration is planned.</p>
+      </div>
+
+      <div style="background:var(--white);padding:36px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <div><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px">Residential &mdash; Completed</p><h2 class="h2" style="font-size:22px">Private Residence &mdash; Whole-Home Automation</h2></div>
+          <span class="badge badge-blue">Completed</span>
+        </div>
+        <p class="body-md" style="max-width:680px">Whole-home automation across 60+ control points covering heating, power, underfloor heating, thermostatic radiator valves, water metering, door lock, and smoke detection. Electrical contractor verification available on request.</p>
+      </div>
+
+      <div style="background:var(--off);padding:36px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <div><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px">Energy &mdash; Pilot</p><h2 class="h2" style="font-size:22px">Grid Surplus &mdash; Immersion Heater Triggering</h2></div>
+          <span class="badge badge-navy">Pilot</span>
+        </div>
+        <p class="body-md" style="max-width:680px">Shelly relay on immersion heaters in homes, triggered by grid surplus wind generation. Free hot water for households, metered per MPRN with bill credit applied. Entering pilot phase with potential for hundreds of homes. Future phase includes predictive triggering 5&ndash;10 minutes pre-curtailment.</p>
+      </div>
+
     </div>
   </div>
-</div>
-
-<div class="ph-inner">
-<div class="prj-list">
-
-  <div class="prj-entry">
-    <div class="prj-entry-inner">
-      <div>
-        <div class="prj-meta"><span class="prj-bar blue"></span><span class="prj-sector-tag">Construction · Fleet Energy Management</span></div>
-        <h2 class="prj-title">Tier One Contractor — National Site Network</h2>
-        <p class="prj-problem">"We have transformers running all weekend on sites that are empty. Nobody has ever turned them off."</p>
-        <div class="prj-narrative">
-          <p>A tier one Irish building contractor identified significant out-of-hours energy waste across its national site network. Site cabins with electric heating, and large 10kVA transformers that power tools during the working day — nothing was being switched off.</p>
-          <p>Jaly designed and is deploying a fleet-managed system covering every site. In-wall relays at the fused spur of each cabin heater give granular heating control per device. A specific MCB solution allows transformers to be switched safely without tripping — powered down after hours, brought back in a staggered sequence each morning to prevent load spikes.</p>
-          <p>A custom dashboard presents energy data and control in the format the client's operations team requires — per device, per group, per site, or across the full estate.</p>
-        </div>
-        <div class="prj-status"><span class="status"><span class="dot dot-blue"></span>Active deployment — scaling nationally</span></div>
-      </div>
-      <div>
-        <p class="prj-detail-label">What Was Deployed</p>
-        <ul class="prj-detail-list">
-          <li>In-wall relays at fused spur of every cabin wall heater</li>
-          <li>Specialist MCB solution for safe transformer switching</li>
-          <li>Shelly Fleet Manager — centralised multi-site dashboard</li>
-          <li>Custom UI built to client specification</li>
-          <li>Per-device, per-group, per-site, and total-estate control</li>
-          <li>Staggered morning start-up to prevent load spikes</li>
-          <li>Out-of-hours automation — sites power down automatically</li>
-          <li>Full energy metering and consumption reporting</li>
-        </ul>
-        <div class="prj-meta-grid">
-          <div class="prj-meta-cell"><div class="prj-meta-label">Investment</div><div class="prj-meta-val">Six figures</div></div>
-          <div class="prj-meta-cell"><div class="prj-meta-label">Payback</div><div class="prj-meta-val">Months, season dependent</div></div>
-          <div class="prj-meta-cell"><div class="prj-meta-label">Coverage</div><div class="prj-meta-val">National — all sites</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="prj-entry">
-    <div class="prj-entry-inner">
-      <div>
-        <div class="prj-meta"><span class="prj-bar green"></span><span class="prj-sector-tag">Residential · Whole-Home System</span></div>
-        <h2 class="prj-title">Private Residence — Cork</h2>
-        <p class="prj-problem">"I want the whole house smart — heating, power, everything — and I want it all in one app."</p>
-        <div class="prj-narrative">
-          <p>A comprehensive whole-home brief. The challenge in projects like this is the breadth — gas central heating, electric underfloor heating, mains power circuits, environmental sensors, access control — each of which would ordinarily require a separate platform.</p>
-          <p>Smart relays for power and lighting circuits throughout the property. Electric heaters and underfloor mats controlled at the spur. Smart TRVs manage gas-fired radiators room by room. Water metering, smart door lock, and smoke detection complete the system. Every device in the same app, no separate logins.</p>
-        </div>
-        <div class="prj-status"><span class="status"><span class="dot dot-green"></span>Completed</span></div>
-      </div>
-      <div>
-        <p class="prj-detail-label">What Was Deployed</p>
-        <ul class="prj-detail-list">
-          <li>Smart in-wall relays for power and lighting circuits</li>
-          <li>Electric heater control — relay at fused spur</li>
-          <li>Underfloor heating mat control</li>
-          <li>Smart TRVs for gas-fired central heating — per room</li>
-          <li>Water metering</li>
-          <li>Smart door lock with remote access</li>
-          <li>Smoke detection integrated into same platform</li>
-          <li>Automation — schedules, presence triggers, scene control</li>
-        </ul>
-        <div class="prj-meta-grid">
-          <div class="prj-meta-cell" style="grid-column:1/-1"><div class="prj-meta-label">Verification</div><div class="prj-meta-val">Electrical contractor available on request</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="prj-entry">
-    <div class="prj-entry-inner">
-      <div>
-        <div class="prj-meta"><span class="prj-bar amber"></span><span class="prj-sector-tag">Energy Infrastructure · Social Impact · Grid</span></div>
-        <h2 class="prj-title">National Grid Demand Management</h2>
-        <p class="prj-problem">"Wind farms are being switched off at night because there's too much energy on the grid. Homes in energy poverty can't afford to heat their water."</p>
-        <div class="prj-narrative">
-          <p>When wind generation exceeds grid demand — most commonly overnight — the grid operator instructs wind farms to curtail output, incurring fines. Meanwhile, households in energy poverty ration basic utilities including hot water.</p>
-          <p>A Shelly relay fitted in parallel with the existing immersion heater in each qualifying home. When surplus wind energy is available, devices are triggered remotely to heat water at no cost to the household. Energy metered per MPRN; bill credit applied automatically. Future state: predictive triggering five to ten minutes before curtailment instructions.</p>
-        </div>
-        <div class="prj-status"><span class="status"><span class="dot dot-amber"></span>Entering pilot — scaling to hundreds of homes</span></div>
-      </div>
-      <div>
-        <p class="prj-detail-label">What Was Deployed</p>
-        <ul class="prj-detail-list">
-          <li>Shelly relay in parallel with domestic immersion heaters</li>
-          <li>Remote trigger infrastructure — fleet-scale activation</li>
-          <li>Per-device energy metering linked to household MPRN</li>
-          <li>Automated bill credit on energy consumed</li>
-          <li>Grid curtailment signal integration</li>
-          <li>Future: predictive triggering 5–10 minutes pre-curtailment</li>
-        </ul>
-        <div class="prj-meta-grid">
-          <div class="prj-meta-cell"><div class="prj-meta-label">Scale</div><div class="prj-meta-val">Hundreds to thousands of homes</div></div>
-          <div class="prj-meta-cell"><div class="prj-meta-label">Jaly's Role</div><div class="prj-meta-val">Device spec, trigger, metering</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="prj-entry">
-    <div class="prj-entry-inner">
-      <div>
-        <div class="prj-meta"><span class="prj-bar teal"></span><span class="prj-sector-tag">Hospitality · Mixed-System Heating</span></div>
-        <h2 class="prj-title">Hotel Heating — 100-Room Property</h2>
-        <p class="prj-problem">"We have gas radiators, electric wall heaters, and underfloor mats — three different systems with no central control."</p>
-        <div class="prj-narrative">
-          <p>A 100-room hotel with three distinct heating technologies. Smart TRVs on gas radiators connected via USB gateways in corridor-mounted cabinets. In-spur relays control electric heaters. Relays manage underfloor mats. All three under one Fleet Manager dashboard.</p>
-          <p>Where the hotel's property management system can be linked, room heating follows occupancy automatically. Common areas run on schedules set by hotel management. First Irish deployment of this configuration.</p>
-        </div>
-        <div class="prj-status"><span class="status"><span class="dot dot-teal"></span>In development — first Irish deployment</span></div>
-      </div>
-      <div>
-        <p class="prj-detail-label">What Is Being Deployed</p>
-        <ul class="prj-detail-list">
-          <li>Smart TRVs on gas-fired radiators — per room</li>
-          <li>USB gateway solution in corridor cabinets</li>
-          <li>In-spur relays for electric wall heaters</li>
-          <li>Relays for electric underfloor heating mats</li>
-          <li>Fleet Manager — single dashboard for all heating types</li>
-          <li>Occupancy system integration — heating follows room status</li>
-          <li>Energy monitoring per room type</li>
-        </ul>
-        <div class="prj-meta-grid">
-          <div class="prj-meta-cell"><div class="prj-meta-label">Scale</div><div class="prj-meta-val">100 rooms</div></div>
-          <div class="prj-meta-cell"><div class="prj-meta-label">Status</div><div class="prj-meta-val">First in Ireland</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="prj-entry" style="border-bottom:none">
-    <div class="prj-entry-inner">
-      <div>
-        <div class="prj-meta"><span class="prj-bar purple"></span><span class="prj-sector-tag">Residential · Solar · Channel Partnership</span></div>
-        <h2 class="prj-title">Solar Energy Display — 1,000-Home Rollout</h2>
-        <p class="prj-problem">"Our customers have solar installed but no real visibility of what it's generating or where the energy is going."</p>
-        <div class="prj-narrative">
-          <p>A proposed partnership with solar installation companies to add energy visibility to their existing customer base. The Shelly Wall Display shows homeowners live generation and consumption data. The same display becomes a full home control interface the moment smart relays are added — a natural first step into whole-home automation.</p>
-          <p>Jaly is working directly with Shelly to refine how the display presents energy data for this application.</p>
-        </div>
-        <div class="prj-status"><span class="status"><span class="dot dot-purple"></span>Active discussion — pipeline</span></div>
-      </div>
-      <div>
-        <p class="prj-detail-label">What Is Proposed</p>
-        <ul class="prj-detail-list">
-          <li>Shelly Wall Display — live solar generation and consumption</li>
-          <li>Energy metering — 3-channel meter per property</li>
-          <li>Deployed via solar installation company partnerships</li>
-          <li>Natural expansion path — add relays, gain full home control</li>
-          <li>Jaly working with Shelly on display data presentation</li>
-        </ul>
-        <div class="prj-meta-grid">
-          <div class="prj-meta-cell"><div class="prj-meta-label">Scale</div><div class="prj-meta-val">1,000+ homes</div></div>
-          <div class="prj-meta-cell"><div class="prj-meta-label">Model</div><div class="prj-meta-val">Solar installer partnership</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="prj-outro">
-  <p class="tag" style="margin-bottom:10px">Your sector not listed?</p>
-  <p class="body-md" style="max-width:520px">These five projects represent Jaly's current and recent work. The platform is considerably broader — if you have a building, a site, or an estate with energy or control challenges, the conversation is worth having.</p>
-</div>
 </div>
 
 <div class="cta-band">
   <div class="cta-inner">
-    <div><h2 class="cta-h">Tell us what you are trying to solve.</h2><p class="cta-b">Most of our best projects began with a conversation, not a brief.</p></div>
-    <a href="contact.html" class="btn btn-white">Start a Conversation →</a>
+    <div>
+      <h2 class="cta-h">Working on something similar?</h2>
+      <p class="cta-b">Start with a scoping conversation. No commitment required.</p>
+    </div>
+    <a href="contact.html" class="btn btn-cyan" style="white-space:nowrap;font-size:14px;padding:0 28px;height:46px">Get in Touch &rarr;</a>
   </div>
 </div>
 <footer>
-<div class="ft-inner">
-  <div class="ft-top">
-    <div><a href="index.html" class="ft-logo">Jaly<em>.</em>ie</a><p class="ft-tagline">Intelligent building systems designed, supplied, and commissioned across Ireland.</p><div class="ft-badge">Authorised Shelly<b>B2B Partner</b></div></div>
-    <div class="ft-col"><h5>Services</h5><ul><li><a href="what-we-do.html">System Design</a></li><li><a href="what-we-do.html">Hardware Supply</a></li><li><a href="what-we-do.html">Installation</a></li><li><a href="what-we-do.html">Commissioning</a></li></ul></div>
-    <div class="ft-col"><h5>Sectors</h5><ul>
-    <li><a href="construction.html">Construction</a></li>
-    <li><a href="use-cases.html">Hospitality</a></li>
-    <li><a href="use-cases.html">Commercial</a></li>
-    <li><a href="use-cases.html">All Use Cases</a></li>
-  </ul></div>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <a href="index.html" class="ft-logo">jaly</a>
+        <p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p>
+        <div class="ft-badge">Authorised Shelly B2B Distributor &mdash; Ireland</div>
+      </div>
+      <div class="ft-col"><h5>Services</h5><ul>
+        <li><a href="what-we-do.html">System Design</a></li>
+        <li><a href="what-we-do.html">Hardware Supply</a></li>
+        <li><a href="what-we-do.html">Commissioning</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Explore</h5><ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="construction.html">Construction</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="mailto:info@jaly.ie">info@jaly.ie</a></li>
+        <li><a href="https://www.jaly.ie">www.jaly.ie</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>&copy; 2025 Jaly.ie</p>
+      <p>Authorised Shelly distributor &mdash; Republic and Northern Ireland</p>
+    </div>
   </div>
-  <div class="ft-bottom"><p>&copy; 2025 Jaly.ie &mdash; All rights res
+</footer></body></html>

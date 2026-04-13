@@ -8,188 +8,164 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --white:#ffffff;--off:#f7f7f5;--ink:#0a0a0a;--ink-2:#3a3a38;--ink-3:#777772;--ink-4:#b0b0aa;
-  --rule:#e8e8e4;--rule-2:#d0d0ca;--blue:#0047cc;--blue-dim:rgba(0,71,204,0.08);
-  --green:#1a7a3c;--amber:#a85c00;--purple:#5b21b6;--teal:#0f766e;
-  --r:2px;--f-sans:"Inter",system-ui,sans-serif;
+  --navy:#0a2d6b;--blue:#7799f3;--blue2:#6a9af7;--cyan:#5dc0e5;
+  --white:#ffffff;--off:#f4f6fb;--ink:#0a0a0a;--ink2:#2a2a2a;--ink3:#555555;--ink4:#999999;
+  --rule:#e2e6f0;--rule2:#ccd3e8;--r:2px;--f:"Inter",system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--ink);font-family:var(--f-sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--white);border-bottom:1px solid var(--rule)}
-.n-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:var(--ink);text-decoration:none}
-.n-logo em{color:var(--blue);font-style:normal}
+body{background:var(--white);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.1)}
+.n-logo{font-size:20px;font-weight:800;letter-spacing:-0.04em;color:var(--white);text-decoration:none;font-style:italic}
 .n-links{display:flex;gap:0;list-style:none}
-.n-links a{font-size:13px;font-weight:400;color:var(--ink-3);text-decoration:none;padding:0 14px;height:56px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}
-.n-links a:hover{color:var(--ink)}
-.n-links a.on{color:var(--ink);font-weight:500;border-bottom-color:var(--blue)}
-.n-btn{font-size:13px;font-weight:500;color:var(--white);background:var(--ink);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:var(--r);transition:background 0.12s}
-.n-btn:hover{background:var(--ink-2)}
+.n-links a{font-size:13px;font-weight:400;color:rgba(255,255,255,0.65);text-decoration:none;padding:0 14px;height:60px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}
+.n-links a:hover{color:var(--white)}
+.n-links a.on{color:var(--white);font-weight:600;border-bottom-color:var(--cyan)}
+.n-btn{font-size:13px;font-weight:600;color:var(--navy);background:var(--cyan);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:var(--r);transition:background 0.12s}
+.n-btn:hover{background:var(--blue2);color:var(--white)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 48px}
+.ph{padding:64px 0}.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
 .hr{height:1px;background:var(--rule)}
-.tag{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.h1{font-size:clamp(38px,5vw,64px);font-weight:800;line-height:1.04;letter-spacing:-0.04em;color:var(--ink)}
-.h2{font-size:clamp(24px,3vw,38px);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--ink)}
-.h3{font-size:17px;font-weight:600;letter-spacing:-0.02em;color:var(--ink)}
-.body-lg{font-size:16px;font-weight:400;color:var(--ink-2);line-height:1.7}
-.body-md{font-size:14px;font-weight:400;color:var(--ink-2);line-height:1.7}
-.body-sm{font-size:13px;font-weight:400;color:var(--ink-3);line-height:1.65}
+.h1{font-size:clamp(36px,5vw,58px);font-weight:800;line-height:1.04;letter-spacing:-0.04em}
+.h2{font-size:clamp(22px,3vw,34px);font-weight:700;line-height:1.1;letter-spacing:-0.03em}
+.h3{font-size:16px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px}
+.body-lg{font-size:16px;color:var(--ink2);line-height:1.75}
+.body-md{font-size:14px;color:var(--ink2);line-height:1.75}
+.body-sm{font-size:13px;color:var(--ink3);line-height:1.65}
 .btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;border-radius:var(--r);padding:0 20px;height:40px;transition:all 0.12s}
-.btn-dark{background:var(--ink);color:var(--white)}
-.btn-dark:hover{background:var(--ink-2)}
-.btn-line{background:transparent;color:var(--ink-2);border:1px solid var(--rule-2)}
-.btn-line:hover{border-color:var(--ink-3);color:var(--ink)}
-.btn-white{background:var(--white);color:var(--ink)}
-.btn-white:hover{background:var(--off)}
-.btn-text{background:transparent;color:var(--blue);padding:0;height:auto;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:4px;text-decoration:none}
-.btn-text::after{content:"→";transition:transform 0.12s}
-.btn-text:hover::after{transform:translateX(3px)}
-.btn-text:hover{color:var(--ink)}
-.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}
-.dot-green{background:var(--green)}.dot-blue{background:var(--blue)}.dot-amber{background:var(--amber)}.dot-grey{background:var(--ink-4)}.dot-purple{background:var(--purple)}.dot-teal{background:var(--teal)}
-.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--ink-3)}
-.ph{padding:72px 0}
-.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.pg-header{padding:64px 0 56px;border-bottom:1px solid var(--rule)}
-.pg-tag{margin-bottom:14px}
-.pg-h{margin-bottom:16px}
-.pg-body{max-width:560px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
-.f-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.f-input,.f-select,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule-2);color:var(--ink);padding:10px 13px;font-family:var(--f-sans);font-size:13px;border-radius:var(--r);outline:none;transition:border-color 0.12s,background 0.12s;appearance:none}
-.f-input:focus,.f-select:focus,.f-ta:focus{border-color:var(--blue);background:var(--white)}
-.f-ta{min-height:100px;resize:vertical}
-.f-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23b0b0aa' d='M5 6L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
-.f-submit{width:100%;background:var(--ink);color:var(--white);border:none;padding:12px;font-family:var(--f-sans);font-size:13px;font-weight:500;border-radius:var(--r);cursor:pointer;margin-top:2px;transition:background 0.12s}
-.f-submit:hover{background:var(--ink-2)}
-.f-note{font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;line-height:1.5}
-.cta-band{background:var(--ink);padding:56px 0}
+.btn-navy{background:var(--navy);color:var(--white)}.btn-navy:hover{background:#0d3a82}
+.btn-line{background:transparent;color:var(--ink2);border:1px solid var(--rule2)}.btn-line:hover{border-color:var(--navy);color:var(--navy)}
+.btn-cyan{background:var(--cyan);color:var(--navy);font-weight:600}.btn-cyan:hover{background:var(--blue2);color:var(--white)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+/* Band label — matches PDF section headers */
+.band{background:var(--off);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin-bottom:28px}
+.band-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:10px}
+.band-bar{width:4px;height:20px;background:var(--navy);border-radius:2px;flex-shrink:0}
+.band-txt{font-size:13px;font-weight:700;color:var(--navy)}
+/* Stat band */
+.stat-band{background:var(--navy);padding:36px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1)}
+.stat-cell{background:var(--navy);padding:24px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;letter-spacing:-0.04em;color:var(--cyan);margin-bottom:4px}
+.stat-lbl{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
+/* Cards */
+.card{background:var(--white);border:1px solid var(--rule);padding:22px}
+.card-off{background:var(--off);border:1px solid var(--rule);padding:22px}
+.badge{display:inline-flex;padding:2px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.badge-navy{background:var(--navy);color:var(--white)}
+.badge-blue{background:var(--blue);color:var(--white)}
+.badge-cyan{background:var(--cyan);color:var(--navy)}
+/* Hero */
+.hero{background:var(--navy);padding:72px 0 64px}
+/* CTA */
+.cta-band{background:var(--navy);padding:56px 0}
 .cta-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:48px}
-.cta-h{font-size:clamp(18px,2.2vw,28px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
-.cta-b{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:420px}
-footer{background:var(--ink);padding:56px 48px 32px;border-top:1px solid rgba(255,255,255,0.06)}
+.cta-h{font-size:clamp(18px,2.2vw,26px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
+.cta-b{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
+/* Footer */
+footer{background:#040f24;padding:48px 48px 28px}
 .ft-inner{max-width:1040px;margin:0 auto}
-.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:24px}
-.ft-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:12px}
-.ft-logo em{color:var(--blue);font-style:normal}
-.ft-tagline{font-size:13px;color:rgba(255,255,255,0.32);line-height:1.65;max-width:210px;margin-bottom:20px}
-.ft-badge{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:100px;font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.32)}
-.ft-badge b{color:rgba(255,255,255,0.6);font-weight:600;margin-left:4px}
-.ft-col h5{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:20px}
+.ft-logo{font-size:20px;font-weight:800;letter-spacing:-0.04em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:10px;font-style:italic}
+.ft-tag{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.65;max-width:210px;margin-bottom:16px}
+.ft-badge{display:inline-flex;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:100px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.ft-col h5{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:14px}
 .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}
-.ft-col a:hover{color:rgba(255,255,255,0.75)}
-.ft-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.ft-bottom p{font-size:12px;color:rgba(255,255,255,0.18)}
-
-.uc-sector{padding:56px 0;border-bottom:1px solid var(--rule)}
-.uc-sector:last-child{border-bottom:none}
-.uc-sector-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.uc-sector-hdr{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:baseline;margin-bottom:32px}
-.uc-sector-name{font-size:20px;font-weight:700;letter-spacing:-0.03em}
-.uc-sector-scope{font-size:13px;color:var(--ink-3)}
-.uc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.uc-grid.two{grid-template-columns:repeat(2,1fr)}
-.uc-card{background:var(--white);padding:24px}
-.uc-problem{font-size:13px;font-style:italic;color:var(--ink-3);line-height:1.6;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--rule)}
-.uc-title{font-size:14px;font-weight:600;letter-spacing:-0.01em;margin-bottom:8px}
-.uc-desc{font-size:13px;color:var(--ink-3);line-height:1.6;margin-bottom:14px}
-.uc-tags{display:flex;flex-wrap:wrap;gap:4px}
-.uc-tag{font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:2px 8px;border-radius:100px;background:var(--off);color:var(--ink-4);border:1px solid var(--rule-2)}
-.uc-bar{width:24px;height:2px;border-radius:1px;margin-bottom:14px}
-.uc-bar.blue{background:var(--blue)}.uc-bar.green{background:var(--green)}.uc-bar.amber{background:var(--amber)}.uc-bar.purple{background:var(--purple)}.uc-bar.teal{background:var(--teal)}.uc-bar.slate{background:var(--ink-4)}
+.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}.ft-col a:hover{color:rgba(255,255,255,0.8)}
+.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ft-bot p{font-size:12px;color:rgba(255,255,255,0.16)}
+/* Forms */
+.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f-lbl{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4)}
+.f-inp,.f-sel,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule2);color:var(--ink);padding:10px 13px;font-family:var(--f);font-size:13px;border-radius:var(--r);outline:none;transition:border-color 0.12s}
+.f-inp:focus,.f-sel:focus,.f-ta:focus{border-color:var(--blue)}
+.f-ta{min-height:110px;resize:vertical}
+.f-sub{width:100%;background:var(--navy);color:var(--white);border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:600;border-radius:var(--r);cursor:pointer;margin-top:4px;transition:background 0.12s}.f-sub:hover{background:#0d3a82}
 </style>
 </head>
-<body><nav><a href="index.html" class="n-logo">Jaly<em>.</em>ie</a><ul class="n-links"><li><a href="what-we-do.html">What We Do</a></li><li><a href="projects.html">Projects</a></li><li><a href="use-cases.html" class='on'>Use Cases</a></li><li><a href="construction.html">Construction</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="n-btn">Enquire Now</a></nav>
-<div class="ph" style="padding-bottom:0">
+<body>
+<nav>
+  <a href="index.html" class="n-logo">jaly</a>
+  <ul class="n-links">
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="use-cases.html"  class='on'>Use Cases</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="construction.html">Construction</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="n-btn">Enquire Now</a>
+</nav>
+<div class="hero">
+  <div class="wrap">
+    <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px">Applications</p>
+    <h1 class="h1" style="color:var(--white);margin-bottom:20px">Use Cases.</h1>
+    <p class="body-lg" style="color:rgba(255,255,255,0.65);max-width:500px">Shelly-based systems cover a wide range of building automation applications. These are the most common use cases Jaly deploys across commercial, industrial, and residential clients.</p>
+  </div>
+</div>
+
+<div class="ph">
   <div class="ph-inner">
-    <div class="pg-header">
-      <div class="tag pg-tag">Use Cases</div>
-      <h1 class="h1 pg-h">What does it<br>actually solve?</h1>
-      <p class="body-lg pg-body">The most common question is not "how does it work" — it is "what would it do for us specifically?" These are the problems Jaly and the Shelly platform solve, described in the language of the people who have them.</p>
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Energy Management</span></div></div>
+    <div class="three" style="margin-bottom:48px">
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Energy Metering</h3><p class="body-sm">Single-phase and three-phase metering on main incomers, sub-circuits, or individual loads. Real-time consumption data per device or zone. Identify waste before committing to control hardware.</p></div>
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Out-of-Hours Control</h3><p class="body-sm">Automated switching of heating, equipment, and significant loads based on time schedules. Manual override always available on-site. Savings typically identified from week one.</p></div>
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Load Management</h3><p class="body-sm">Monitor and control high-consumption loads &mdash; transformers, immersion heaters, industrial equipment. Staggered start-up to prevent power spikes. Switch off when not needed.</p></div>
     </div>
-  </div>
-</div>
-
-<div class="uc-sector">
-  <div class="uc-sector-inner">
-    <div class="uc-sector-hdr"><div><div class="uc-bar blue"></div><div class="uc-sector-name">Construction</div></div><div class="uc-sector-scope">Site offices · Temporary power · Multi-site estates</div></div>
-    <div class="uc-grid">
-      <div class="uc-card"><p class="uc-problem">"The site cabins are heated all weekend. Nobody is there."</p><div class="uc-title">Out-of-hours cabin heating</div><p class="uc-desc">In-wall relays at the fused spur of each heater allow heating to be scheduled, automated by time, or switched off centrally. Savings are immediate and measurable.</p><div class="uc-tags"><span class="uc-tag">Relay</span><span class="uc-tag">Fleet Manager</span><span class="uc-tag">Scheduling</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"We can't turn the transformers off — they trip when they restart."</p><div class="uc-title">Safe transformer switching</div><p class="uc-desc">A specific MCB solution allows 10kVA transformers to be switched safely without tripping. Powered down after hours, staggered restart each morning to prevent load spikes.</p><div class="uc-tags"><span class="uc-tag">Smart MCB</span><span class="uc-tag">Automation</span><span class="uc-tag">Staggered start</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"I have no idea what each site is costing us in electricity."</p><div class="uc-title">Fleet energy visibility</div><p class="uc-desc">Energy metering per circuit, per site, aggregated to a central dashboard. For the first time, the operations team can see what each site costs — and act on it.</p><div class="uc-tags"><span class="uc-tag">Energy Meter</span><span class="uc-tag">Dashboard</span><span class="uc-tag">Reporting</span></div></div>
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Heating &amp; Climate</span></div></div>
+    <div class="three" style="margin-bottom:48px">
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Cabin Heating</h3><p class="body-sm">Scheduled heating for site offices and cabins. Hardwired boost buttons for on-demand warmth. Remote triggering available. Cabin at the right temperature when the crew arrives, off when they leave.</p></div>
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Hotel Room Heating</h3><p class="body-sm">Per-room or per-zone heating control integrated with occupancy. Centralised visibility across all rooms. Supports gas TRVs, electric wall heaters, and underfloor heating from a single Fleet Manager dashboard.</p></div>
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Thermostatic Control</h3><p class="body-sm">Smart thermostats and in-line temperature sensors ensure target temperatures are met without overshooting. Reduces energy consumption while maintaining comfort.</p></div>
     </div>
-  </div>
-</div>
-
-<div class="uc-sector">
-  <div class="uc-sector-inner">
-    <div class="uc-sector-hdr"><div><div class="uc-bar green"></div><div class="uc-sector-name">Hospitality</div></div><div class="uc-sector-scope">Hotels · Guesthouses · Conference venues</div></div>
-    <div class="uc-grid">
-      <div class="uc-card"><p class="uc-problem">"Rooms are heated whether they're occupied or not."</p><div class="uc-title">Occupancy-linked heating</div><p class="uc-desc">Where the property management system can be linked, room heating follows occupancy automatically. Rooms cool on checkout, reach temperature before check-in.</p><div class="uc-tags"><span class="uc-tag">Smart TRV</span><span class="uc-tag">Relay</span><span class="uc-tag">PMS Integration</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"We have three different heating systems with no central control."</p><div class="uc-title">Mixed-technology unification</div><p class="uc-desc">Gas radiators, electric wall heaters, and underfloor mats — all brought under one Fleet Manager dashboard regardless of heating type. One interface, every room, every technology.</p><div class="uc-tags"><span class="uc-tag">TRV</span><span class="uc-tag">Relay</span><span class="uc-tag">Fleet Manager</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"Common areas run on full heat all day regardless of what's happening."</p><div class="uc-title">Common area scheduling</div><p class="uc-desc">Lobbies, corridors, restaurants automated to the property's own schedule — reducing consumption during low-occupancy periods without staff involvement.</p><div class="uc-tags"><span class="uc-tag">Relay</span><span class="uc-tag">Scheduling</span><span class="uc-tag">Automation</span></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="uc-sector">
-  <div class="uc-sector-inner">
-    <div class="uc-sector-hdr"><div><div class="uc-bar amber"></div><div class="uc-sector-name">Commercial Buildings</div></div><div class="uc-sector-scope">Offices · Multi-tenancy · Large organisations</div></div>
-    <div class="uc-grid">
-      <div class="uc-card"><p class="uc-problem">"The building runs all weekend because someone always forgets to turn things off."</p><div class="uc-title">Out-of-hours automation</div><p class="uc-desc">Lighting, heating, and appliance circuits automated to business hours — with manual override for genuine late working. Nothing runs without reason.</p><div class="uc-tags"><span class="uc-tag">Relay</span><span class="uc-tag">Scheduling</span><span class="uc-tag">Remote control</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"We have twelve offices and no visibility of what any of them uses."</p><div class="uc-title">Multi-site energy visibility</div><p class="uc-desc">Energy metering per office, per floor, or per circuit — aggregated to a single dashboard. Identify the sites and systems with the highest consumption.</p><div class="uc-tags"><span class="uc-tag">Energy Meter</span><span class="uc-tag">3-phase EM</span><span class="uc-tag">Dashboard</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"The board wants an energy reduction plan but we have no baseline data."</p><div class="uc-title">Baseline metering for compliance</div><p class="uc-desc">Before you can reduce energy, you need to measure it. Jaly deploys metering infrastructure that gives facilities teams the data to build a credible reduction programme.</p><div class="uc-tags"><span class="uc-tag">Energy Meter</span><span class="uc-tag">Reporting</span><span class="uc-tag">Export</span></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="uc-sector">
-  <div class="uc-sector-inner">
-    <div class="uc-sector-hdr"><div><div class="uc-bar purple"></div><div class="uc-sector-name">Property Development</div></div><div class="uc-sector-scope">New builds · Refurbishment · Commercial specification</div></div>
-    <div class="uc-grid two">
-      <div class="uc-card"><p class="uc-problem">"Tenants and buyers expect smart systems. We're specifying three different platforms."</p><div class="uc-title">Single-platform specification</div><p class="uc-desc">One platform covers heating, lighting, power, solar metering, EV charging integration, and access control. Specify once, install once, hand over one system.</p><div class="uc-tags"><span class="uc-tag">Relay</span><span class="uc-tag">TRV</span><span class="uc-tag">Energy Meter</span><span class="uc-tag">Wall Display</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"We want to add smart capability to a refurbishment without rewiring circuits."</p><div class="uc-title">Retrofit without disruption</div><p class="uc-desc">Shelly devices install behind existing switches and sockets. No new cabling, no visible infrastructure changes. Smart capability added to existing electrical installations.</p><div class="uc-tags"><span class="uc-tag">Relay</span><span class="uc-tag">Dimmer</span><span class="uc-tag">In-wall</span></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="uc-sector">
-  <div class="uc-sector-inner">
-    <div class="uc-sector-hdr"><div><div class="uc-bar teal"></div><div class="uc-sector-name">M&amp;E Contractors</div></div><div class="uc-sector-scope">Specifiers · Installers · Project delivery</div></div>
-    <div class="uc-grid two">
-      <div class="uc-card"><p class="uc-problem">"The client wants everything in one app. I don't know how to specify it."</p><div class="uc-title">System specification support</div><p class="uc-desc">Jaly works alongside contractors to specify smart systems properly — device selection, quantities, network requirements, integration points. You install; we design and commission.</p><div class="uc-tags"><span class="uc-tag">Design service</span><span class="uc-tag">Supply</span><span class="uc-tag">Commissioning</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"I need a reliable supplier who can get product quickly and support me on site."</p><div class="uc-title">Authorised supply and support</div><p class="uc-desc">Local stock, authorised warranty, volume pricing on committed orders, and a team available by phone during installation.</p><div class="uc-tags"><span class="uc-tag">Local stock</span><span class="uc-tag">Volume pricing</span><span class="uc-tag">Support</span></div></div>
-    </div>
-  </div>
-</div>
-
-<div class="uc-sector" style="border-bottom:none">
-  <div class="uc-sector-inner">
-    <div class="uc-sector-hdr"><div><div class="uc-bar slate"></div><div class="uc-sector-name">Agriculture</div></div><div class="uc-sector-scope">Farm buildings · Ventilation · Remote monitoring</div></div>
-    <div class="uc-grid two">
-      <div class="uc-card"><p class="uc-problem">"The ventilation fans in the sheds run constantly — I have no way to control them remotely."</p><div class="uc-title">Remote ventilation control</div><p class="uc-desc">Relay control of ventilation, heating, and pumping equipment — triggered by temperature and humidity sensors. LoRa connectivity for locations beyond WiFi range.</p><div class="uc-tags"><span class="uc-tag">Relay</span><span class="uc-tag">Temp sensor</span><span class="uc-tag">LoRa</span></div></div>
-      <div class="uc-card"><p class="uc-problem">"I want to know what's happening on the farm without driving out to check."</p><div class="uc-title">Remote environmental monitoring</div><p class="uc-desc">Temperature, humidity, door status, and power consumption — monitored remotely with alerts when values fall outside defined parameters.</p><div class="uc-tags"><span class="uc-tag">H&amp;T sensor</span><span class="uc-tag">Door sensor</span><span class="uc-tag">Alerts</span></div></div>
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Monitoring &amp; Visibility</span></div></div>
+    <div class="three">
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Fleet Management</h3><p class="body-sm">All devices across all sites managed from one web-based Fleet Manager dashboard. Control per device, group, site, or globally. Automations set at any level of the hierarchy.</p></div>
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>Water Metering</h3><p class="body-sm">Non-Shelly pulse meters integrated into the Jaly system for full water consumption monitoring alongside power data. Detect leaks, track usage per site or per tenant.</p></div>
+      <div class="card-off" style="border-top:3px solid var(--navy)"><h3>BACS Compliance</h3><p class="body-sm">A properly designed Jaly system delivers BACS-compliant functionality for non-residential buildings above 290kW. Required by S.I. 393 of 2021 since 31 December 2024.</p></div>
     </div>
   </div>
 </div>
 
 <div class="cta-band">
   <div class="cta-inner">
-    <div><h2 class="cta-h">See your situation here?</h2><p class="cta-b">Start with a conversation about your site, your systems, and what you want to change.</p></div>
-    <a href="contact.html" class="btn btn-white">Start a Conversation →</a>
+    <div>
+      <h2 class="cta-h">Not sure which use case fits your situation?</h2>
+      <p class="cta-b">Start with a conversation. We will assess what you have and explain what is possible.</p>
+    </div>
+    <a href="contact.html" class="btn btn-cyan" style="white-space:nowrap;font-size:14px;padding:0 28px;height:46px">Get in Touch &rarr;</a>
   </div>
 </div>
 <footer>
-<div class="ft-inner">
-  <div class="ft-top">
-    <div><a href="index.html" class="ft-logo">Jaly<em>.</em>ie</a><p class="ft-tagline">Intelligent building systems designed, supplied, and commissioned across Ireland.</p><div class="ft-badge">Authorised Shelly<b>B2B Partner</b></div></div>
-    <div class="ft-col"><h5>Services</h5><ul><li><a href="what-we-do.html">System Design</a></li><li><a href="what-we-do.html">Hardware Supply</a></li><li><a href="what-we-do.html">Installation</a></li><li><a href="what-we-do.html">Commissioning</a></li></ul></div>
-    <div class="ft-col"><h5>Sectors</h5><ul>
-    <li><a href="construction.html">Construction</a></li>
-    <li><a href="use-cases.html">Hospitality</a></li>
-    <li><a href="use-cases.html">Commercial</a></li>
-    <li><a href="use-cases.html">All Use Cases</a></li>
-  </ul></div>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <a href="index.html" class="ft-logo">jaly</a>
+        <p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p>
+        <div class="ft-badge">Authorised Shelly B2B Distributor &mdash; Ireland</div>
+      </div>
+      <div class="ft-col"><h5>Services</h5><ul>
+        <li><a href="what-we-do.html">System Design</a></li>
+        <li><a href="what-we-do.html">Hardware Supply</a></li>
+        <li><a href="what-we-do.html">Commissioning</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Explore</h5><ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="construction.html">Construction</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="mailto:info@jaly.ie">info@jaly.ie</a></li>
+        <li><a href="https://www.jaly.ie">www.jaly.ie</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>&copy; 2025 Jaly.ie</p>
+      <p>Authorised Shelly distributor &mdash; Republic and Northern Ireland</p>
+    </div>
   </div>
-  <div class="ft-bottom"><p>&copy; 2025 Jaly.ie &mdash; All rights res
+</footer></body></html>

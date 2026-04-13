@@ -2,382 +2,339 @@
 <html lang="en-GB">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Smart Energy Solutions for Construction Sites &mdash; Jaly</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Smart Construction Sites — Jaly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--white:#ffffff;--off:#f7f7f5;--ink:#0a0a0a;--ink-2:#3a3a38;--ink-3:#777772;--ink-4:#b0b0aa;--rule:#e8e8e4;--rule-2:#d0d0ca;--blue:#0047cc;--blue-dim:rgba(0,71,204,0.08);--blue-mid:#2563eb;--green:#1a7a3c;--green-dim:rgba(26,122,60,0.08);--amber:#a85c00;--amber-dim:rgba(168,92,0,0.08);--red:#b91c1c;--red-dim:rgba(185,28,28,0.07);--r:2px;--f:"Inter",system-ui,sans-serif;}
-html{scroll-behavior:smooth}body{background:var(--white);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:sticky;top:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--white);border-bottom:1px solid var(--rule)}
-.n-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:var(--ink);text-decoration:none}.n-logo em{color:var(--blue);font-style:normal}
-.n-links{display:flex;gap:0;list-style:none}.n-links a{font-size:13px;font-weight:400;color:var(--ink-3);text-decoration:none;padding:0 14px;height:56px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}.n-links a:hover{color:var(--ink)}.n-links a.on{color:var(--ink);font-weight:500;border-bottom-color:var(--blue)}
-.n-btn{font-size:13px;font-weight:500;color:var(--white);background:var(--ink);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:2px;transition:background 0.12s}.n-btn:hover{background:var(--ink-2)}
-.wrap{max-width:1040px;margin:0 auto;padding:0 48px}.hr{height:1px;background:var(--rule)}
-.tag{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.h1{font-size:clamp(36px,5vw,60px);font-weight:800;line-height:1.04;letter-spacing:-0.04em;color:var(--ink)}
-.h2{font-size:clamp(22px,3vw,36px);font-weight:700;line-height:1.1;letter-spacing:-0.03em;color:var(--ink)}
-.h3{font-size:17px;font-weight:600;letter-spacing:-0.02em;color:var(--ink)}
-.body-lg{font-size:16px;font-weight:400;color:var(--ink-2);line-height:1.7}
-.body-md{font-size:14px;font-weight:400;color:var(--ink-2);line-height:1.7}
-.body-sm{font-size:13px;font-weight:400;color:var(--ink-3);line-height:1.65}
-.btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;border-radius:2px;padding:0 20px;height:40px;transition:all 0.12s}
-.btn-dark{background:var(--ink);color:var(--white)}.btn-dark:hover{background:var(--ink-2)}
-.btn-line{background:transparent;color:var(--ink-2);border:1px solid var(--rule-2)}.btn-line:hover{border-color:var(--ink-3);color:var(--ink)}
-.btn-white{background:var(--white);color:var(--ink)}.btn-white:hover{background:var(--off)}
-.btn-text{background:transparent;color:var(--blue);padding:0;height:auto;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:4px;text-decoration:none}.btn-text::after{content:"→";transition:transform 0.12s}.btn-text:hover::after{transform:translateX(3px)}.btn-text:hover{color:var(--ink)}
-.dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;display:inline-block}.dot-g{background:var(--green)}.dot-b{background:var(--blue)}.dot-a{background:var(--amber)}.dot-gr{background:var(--ink-4)}
-.status{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:var(--ink-3)}
-.ph{padding:72px 0}.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.f-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
-.f-lbl{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-4)}
-.f-inp,.f-sel,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule-2);color:var(--ink);padding:10px 13px;font-family:var(--f);font-size:13px;border-radius:2px;outline:none;transition:border-color 0.12s,background 0.12s;appearance:none}
-.f-inp:focus,.f-sel:focus,.f-ta:focus{border-color:var(--blue-mid);background:var(--white)}
-.f-ta{min-height:100px;resize:vertical}
-.f-sel{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23b0b0aa' d='M5 6L0 0h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;cursor:pointer}
-.f-sub{width:100%;background:var(--ink);color:var(--white);border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:500;border-radius:2px;cursor:pointer;margin-top:2px;transition:background 0.12s}.f-sub:hover{background:var(--ink-2)}
-.f-note{font-size:11px;color:var(--ink-4);text-align:center;margin-top:8px;line-height:1.5}
-.cta-band{background:var(--ink);padding:56px 0}
+:root{
+  --navy:#0a2d6b;--blue:#7799f3;--blue2:#6a9af7;--cyan:#5dc0e5;
+  --white:#ffffff;--off:#f4f6fb;--ink:#0a0a0a;--ink2:#2a2a2a;--ink3:#555555;--ink4:#999999;
+  --rule:#e2e6f0;--rule2:#ccd3e8;--r:2px;--f:"Inter",system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.1)}
+.n-logo{font-size:20px;font-weight:800;letter-spacing:-0.04em;color:var(--white);text-decoration:none;font-style:italic}
+.n-links{display:flex;gap:0;list-style:none}
+.n-links a{font-size:13px;font-weight:400;color:rgba(255,255,255,0.65);text-decoration:none;padding:0 14px;height:60px;display:flex;align-items:center;border-bottom:2px solid transparent;transition:color 0.12s,border-color 0.12s}
+.n-links a:hover{color:var(--white)}
+.n-links a.on{color:var(--white);font-weight:600;border-bottom-color:var(--cyan)}
+.n-btn{font-size:13px;font-weight:600;color:var(--navy);background:var(--cyan);padding:0 18px;height:34px;display:inline-flex;align-items:center;text-decoration:none;border-radius:var(--r);transition:background 0.12s}
+.n-btn:hover{background:var(--blue2);color:var(--white)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 48px}
+.ph{padding:64px 0}.ph-inner{max-width:1040px;margin:0 auto;padding:0 48px}
+.hr{height:1px;background:var(--rule)}
+.h1{font-size:clamp(36px,5vw,58px);font-weight:800;line-height:1.04;letter-spacing:-0.04em}
+.h2{font-size:clamp(22px,3vw,34px);font-weight:700;line-height:1.1;letter-spacing:-0.03em}
+.h3{font-size:16px;font-weight:700;letter-spacing:-0.01em;margin-bottom:8px}
+.body-lg{font-size:16px;color:var(--ink2);line-height:1.75}
+.body-md{font-size:14px;color:var(--ink2);line-height:1.75}
+.body-sm{font-size:13px;color:var(--ink3);line-height:1.65}
+.btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;text-decoration:none;border-radius:var(--r);padding:0 20px;height:40px;transition:all 0.12s}
+.btn-navy{background:var(--navy);color:var(--white)}.btn-navy:hover{background:#0d3a82}
+.btn-line{background:transparent;color:var(--ink2);border:1px solid var(--rule2)}.btn-line:hover{border-color:var(--navy);color:var(--navy)}
+.btn-cyan{background:var(--cyan);color:var(--navy);font-weight:600}.btn-cyan:hover{background:var(--blue2);color:var(--white)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+/* Band label — matches PDF section headers */
+.band{background:var(--off);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:10px 0;margin-bottom:28px}
+.band-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:10px}
+.band-bar{width:4px;height:20px;background:var(--navy);border-radius:2px;flex-shrink:0}
+.band-txt{font-size:13px;font-weight:700;color:var(--navy)}
+/* Stat band */
+.stat-band{background:var(--navy);padding:36px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1)}
+.stat-cell{background:var(--navy);padding:24px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;letter-spacing:-0.04em;color:var(--cyan);margin-bottom:4px}
+.stat-lbl{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5}
+/* Cards */
+.card{background:var(--white);border:1px solid var(--rule);padding:22px}
+.card-off{background:var(--off);border:1px solid var(--rule);padding:22px}
+.badge{display:inline-flex;padding:2px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.badge-navy{background:var(--navy);color:var(--white)}
+.badge-blue{background:var(--blue);color:var(--white)}
+.badge-cyan{background:var(--cyan);color:var(--navy)}
+/* Hero */
+.hero{background:var(--navy);padding:72px 0 64px}
+/* CTA */
+.cta-band{background:var(--navy);padding:56px 0}
 .cta-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:48px}
-.cta-h{font-size:clamp(18px,2.2vw,28px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
-.cta-b{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.6;max-width:420px}
-footer{background:var(--ink);padding:56px 48px 32px;border-top:1px solid rgba(255,255,255,0.06)}
+.cta-h{font-size:clamp(18px,2.2vw,26px);font-weight:700;letter-spacing:-0.03em;color:var(--white);margin-bottom:8px}
+.cta-b{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
+/* Footer */
+footer{background:#040f24;padding:48px 48px 28px}
 .ft-inner{max-width:1040px;margin:0 auto}
-.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08);margin-bottom:24px}
-.ft-logo{font-size:15px;font-weight:700;letter-spacing:-0.03em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:12px}.ft-logo em{color:var(--blue);font-style:normal}
-.ft-tag{font-size:13px;color:rgba(255,255,255,0.32);line-height:1.65;max-width:210px;margin-bottom:20px}
-.ft-badge{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:100px;font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.32)}.ft-badge b{color:rgba(255,255,255,0.6);font-weight:600;margin-left:4px}
-.ft-col h5{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:14px}
-.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}.ft-col a:hover{color:rgba(255,255,255,0.75)}
-.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.ft-bot p{font-size:12px;color:rgba(255,255,255,0.18)}
-
-.con-hero{background:var(--ink);padding:80px 0 72px}
-.con-hero-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.con-hero h1{color:var(--white);margin-bottom:20px}
-.con-hero .body-lg{color:rgba(255,255,255,0.6);margin-bottom:32px;max-width:440px}
-.con-hero .btn-white{flex-shrink:0}
-.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1)}
-.stat-cell{background:rgba(255,255,255,0.04);padding:28px 24px}
-.stat-num{font-size:36px;font-weight:800;letter-spacing:-0.04em;color:var(--white);margin-bottom:6px;line-height:1}
-.stat-num em{color:#3b9eff;font-style:normal}
-.stat-lbl{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5}
-.stat-src{font-size:10px;color:rgba(255,255,255,0.2);margin-top:4px;font-style:italic}
-
-.prob-section{padding:72px 0}
-.prob-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:32px}
-.prob-card{background:var(--white);padding:28px;position:relative}
-.prob-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
-.prob-card.red::before{background:var(--red)}
-.prob-card.amber::before{background:var(--amber)}
-.prob-card.ink::before{background:var(--ink)}
-.prob-badge{display:inline-flex;align-items:center;padding:3px 8px;border-radius:100px;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
-.prob-badge.red{background:var(--red-dim);color:var(--red)}
-.prob-badge.amber{background:var(--amber-dim);color:var(--amber)}
-.prob-badge.ink{background:var(--off);color:var(--ink-3)}
-.prob-title{font-size:16px;font-weight:600;letter-spacing:-0.02em;margin-bottom:10px}
-.prob-body{font-size:13px;color:var(--ink-3);line-height:1.65}
-
-.sol-section{padding:72px 0;background:var(--off)}
-.sol-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.sol-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:32px}
-.sol-card{background:var(--white);padding:32px;border-left:3px solid var(--blue)}
-.sol-card.green{border-left-color:var(--green)}
-.sol-title{font-size:15px;font-weight:600;letter-spacing:-0.02em;margin-bottom:10px}
-.sol-body{font-size:13px;color:var(--ink-3);line-height:1.65}
-.sol-list{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:6px}
-.sol-list li{font-size:13px;color:var(--ink-2);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
-.sol-list li::before{content:"";flex-shrink:0;width:4px;height:4px;border-radius:50%;background:var(--blue);margin-top:6px}
-
-.hw-section{padding:72px 0}
-.hw-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.hw-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:32px}
-.hw-card{background:var(--white);padding:24px 20px}
-.hw-cat{font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
-.hw-title{font-size:14px;font-weight:600;letter-spacing:-0.02em;margin-bottom:8px}
-.hw-body{font-size:12px;color:var(--ink-3);line-height:1.6}
-
-.result-section{padding:72px 0;background:var(--ink)}
-.result-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.result-section .tag{color:rgba(255,255,255,0.35)}
-.result-section .h2{color:var(--white);margin-top:12px;margin-bottom:40px}
-.result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08)}
-.result-card{background:rgba(255,255,255,0.03);padding:28px 24px}
-.result-card::before{content:"";display:block;width:24px;height:2px;border-radius:1px;margin-bottom:16px}
-.result-card.b::before{background:#3b9eff}.result-card.g::before{background:#34d399}.result-card.a::before{background:#fbbf24}.result-card.w::before{background:rgba(255,255,255,0.3)}
-.result-title{font-size:14px;font-weight:600;color:var(--white);letter-spacing:-0.02em;margin-bottom:8px}
-.result-body{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.65}
-
-.bacs-section{padding:72px 0}
-.bacs-inner{max-width:1040px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.bacs-callout{padding:24px;background:var(--blue-dim);border-left:3px solid var(--blue);margin-top:20px}
-.bacs-callout-title{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:6px}
-.bacs-callout-body{font-size:13px;color:var(--ink-2);line-height:1.65}
-.bacs-classes{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.bacs-class{background:var(--white);padding:16px 20px;display:grid;grid-template-columns:48px 1fr;gap:12px}
-.bacs-class-badge{font-size:14px;font-weight:800;letter-spacing:-0.02em}
-.bacs-class-badge.a{color:var(--green)}.bacs-class-badge.b{color:var(--blue)}.bacs-class-badge.c{color:var(--amber)}.bacs-class-badge.d{color:var(--ink-4)}
-.bacs-class-title{font-size:13px;font-weight:600;margin-bottom:3px}
-.bacs-class-body{font-size:12px;color:var(--ink-3);line-height:1.5}
-
-.cs-section{padding:72px 0;background:var(--off)}
-.cs-inner{max-width:1040px;margin:0 auto;padding:0 48px}
-.cs-card{background:var(--white);border:1px solid var(--rule);padding:40px;margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.cs-label{font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
-.cs-title{font-size:22px;font-weight:700;letter-spacing:-0.03em;margin-bottom:16px}
-.cs-body{font-size:14px;color:var(--ink-2);line-height:1.75}
-.cs-body p+p{margin-top:12px}
-.cs-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule)}
-.cs-stat{background:var(--white);padding:20px}
-.cs-stat-num{font-size:28px;font-weight:800;letter-spacing:-0.04em;color:var(--ink);margin-bottom:4px}
-.cs-stat-lbl{font-size:12px;color:var(--ink-3);line-height:1.4}
-.cs-note{margin-top:16px;font-size:12px;color:var(--ink-4);font-style:italic}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:20px}
+.ft-logo{font-size:20px;font-weight:800;letter-spacing:-0.04em;color:rgba(255,255,255,0.9);text-decoration:none;display:block;margin-bottom:10px;font-style:italic}
+.ft-tag{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.65;max-width:210px;margin-bottom:16px}
+.ft-badge{display:inline-flex;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:100px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.ft-col h5{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.12s}.ft-col a:hover{color:rgba(255,255,255,0.8)}
+.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ft-bot p{font-size:12px;color:rgba(255,255,255,0.16)}
+/* Forms */
+.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f-lbl{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4)}
+.f-inp,.f-sel,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule2);color:var(--ink);padding:10px 13px;font-family:var(--f);font-size:13px;border-radius:var(--r);outline:none;transition:border-color 0.12s}
+.f-inp:focus,.f-sel:focus,.f-ta:focus{border-color:var(--blue)}
+.f-ta{min-height:110px;resize:vertical}
+.f-sub{width:100%;background:var(--navy);color:var(--white);border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:600;border-radius:var(--r);cursor:pointer;margin-top:4px;transition:background 0.12s}.f-sub:hover{background:#0d3a82}
 </style>
 </head>
-<body><nav><a href="index.html" class="n-logo">Jaly<em>.</em>ie</a><ul class="n-links"><li><a href="what-we-do.html" >What We Do</a></li><li><a href="projects.html" >Projects</a></li><li><a href="use-cases.html" >Use Cases</a></li><li><a href="construction.html" class='on'>Construction</a></li><li><a href="technology.html" >Technology</a></li><li><a href="contact.html" >Contact</a></li></ul><a href="contact.html" class="n-btn">Enquire Now</a></nav>
-<div class="con-hero">
-  <div class="con-hero-inner">
-    <div>
-      <div class="tag" style="color:rgba(255,255,255,0.35);margin-bottom:16px">Construction Sector</div>
-      <h1 class="h1 con-hero" style="color:var(--white);margin-bottom:20px">Your sites are running energy they don&rsquo;t need.</h1>
-      <p class="body-lg" style="color:rgba(255,255,255,0.6);margin-bottom:32px;max-width:440px">Construction sites run transformers and cabin heaters around the clock &mdash; through nights, weekends, and shutdown periods. Most companies have never measured it. The ones that have are acting on it.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="contact.html" class="btn btn-white">Start a Conversation</a>
-        <a href="#case-study" class="btn btn-line" style="border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.6)">See the Case Study</a>
-      </div>
+<body>
+<nav>
+  <a href="index.html" class="n-logo">jaly</a>
+  <ul class="n-links">
+    <li><a href="what-we-do.html">What We Do</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="use-cases.html">Use Cases</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="construction.html"  class='on'>Construction</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="n-btn">Enquire Now</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px">Sector Focus — Construction</p>
+    <h1 class="h1" style="color:var(--white);margin-bottom:20px">Smart Construction Sites.<br><span style="color:var(--cyan)">Measurable Savings.</span></h1>
+    <p class="body-lg" style="color:rgba(255,255,255,0.65);max-width:560px;margin-bottom:36px">Understand energy wastage and remove it, without compromising on efficiencies, uptime or site morale.</p>
+    <div style="display:flex;gap:12px">
+      <a href="contact.html" class="btn btn-cyan">Start a Conversation</a>
+      <a href="projects.html" class="btn btn-line" style="border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.7)">View Case Study</a>
     </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stat-band">
+  <div class="wrap">
     <div class="stat-grid">
-      <div class="stat-cell">
-        <div class="stat-num"><em>€1,500<span style="font-size:22px;color:rgba(255,255,255,0.5)">+</span></em></div>
-        <div class="stat-lbl">Weekly savings identified per site before a single relay was installed &mdash; from a single meter</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num"><em>56<span style="font-size:22px;color:rgba(255,255,255,0.5)">%</span></em></div>
-        <div class="stat-lbl">Of energy in uncontrolled commercial buildings is consumed outside working hours</div>
-        <div class="stat-src">Masoso &amp; Grobler, Building and Environment, 2010</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num"><em>11</em> <span style="font-size:18px;color:rgba(255,255,255,0.5)">hrs</span></div>
-        <div class="stat-lbl">Every working day your site runs energy it doesn&rsquo;t need &mdash; 6pm to 5am, every night, every weekend</div>
-      </div>
-      <div class="stat-cell">
-        <div class="stat-num"><em>30<span style="font-size:22px;color:rgba(255,255,255,0.5)">%</span></em></div>
-        <div class="stat-lbl">Increase in Irish construction sector energy use between 2022 and 2023 &mdash; the largest of any sector</div>
-        <div class="stat-src">CSO Business in Ireland 2025, Energy &amp; Emissions</div>
-      </div>
+      <div class="stat-cell"><div class="stat-num">&euro;1,500</div><div class="stat-lbl">Weekly savings per site<br>identified before a single device was installed</div></div>
+      <div class="stat-cell"><div class="stat-num">&lt;3 wks</div><div class="stat-lbl">Average return on investment<br>from installation</div></div>
+      <div class="stat-cell"><div class="stat-num">1</div><div class="stat-lbl">Dashboard for all sites<br>visibility and control from anywhere</div></div>
+      <div class="stat-cell"><div class="stat-num">56%</div><div class="stat-lbl">Of energy in uncontrolled buildings<br>is consumed outside working hours*</div></div>
     </div>
   </div>
 </div>
+<p style="font-size:11px;color:var(--ink4);text-align:right;padding:6px 48px;max-width:1040px;margin:0 auto">*Masoso &amp; Grobler, Building and Environment research</p>
 
-<div class="prob-section">
-  <div class="prob-inner">
-    <div class="tag" style="margin-bottom:12px">The Problem</div>
-    <h2 class="h2">Out-of-hours energy waste is a construction sector norm.</h2>
-    <div class="prob-grid">
-      <div class="prob-card red">
-        <div class="prob-badge red">Always On</div>
-        <div class="prob-title">Cabin Heaters</div>
-        <p class="prob-body">Electric wall heaters in site cabins run constantly &mdash; all night, all weekend, and during shutdown periods. They are left on &ldquo;just in case&rdquo; because turning them off and on requires someone to be there. Nobody is.</p>
+<!-- OUR PROCESS -->
+<div class="ph">
+  <div class="ph-inner">
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Our Process</span></div></div>
+    <div class="three">
+      <div class="card-off" style="border-top:3px solid var(--navy)">
+        <div style="font-size:22px;font-weight:800;color:var(--blue);margin-bottom:12px">01</div>
+        <h3>Knowledge via Metering</h3>
+        <p class="body-sm">Understand your energy usage down to the minute and identify areas for savings by installing a small number of utility meters.</p>
       </div>
-      <div class="prob-card amber">
-        <div class="prob-badge amber">Always Energised</div>
-        <div class="prob-title">Transformers</div>
-        <p class="prob-body">Large 10kVA transformers stay live after hours because switching them off trips the breaker on restart. Without a solution to that problem, the path of least resistance is to leave them on. All weekend. Every weekend.</p>
+      <div class="card-off" style="border-top:3px solid var(--navy)">
+        <div style="font-size:22px;font-weight:800;color:var(--blue);margin-bottom:12px">02</div>
+        <h3>Control</h3>
+        <p class="body-sm">Install control devices — smart relays — for identified device categories. Every device is controllable on-site or remotely and includes power monitoring.</p>
       </div>
-      <div class="prob-card ink">
-        <div class="prob-badge ink">No Data</div>
-        <div class="prob-title">No Visibility</div>
-        <p class="prob-body">Without metering, there is no baseline and no way to quantify waste. Energy costs are absorbed into the project budget and never interrogated. The problem persists because nobody can prove its scale.</p>
+      <div class="card-off" style="border-top:3px solid var(--navy)">
+        <div style="font-size:22px;font-weight:800;color:var(--blue);margin-bottom:12px">03</div>
+        <h3>Automate</h3>
+        <p class="body-sm">Schedule devices based on time or other criteria. Automations can be easily overridden on-site if required.</p>
       </div>
     </div>
   </div>
 </div>
 <div class="hr"></div>
 
-<div class="sol-section">
-  <div class="sol-inner">
-    <div class="tag" style="margin-bottom:12px">The Solution</div>
-    <h2 class="h2">Automate, control, and measure &mdash; at site and fleet scale.</h2>
-    <div class="sol-grid">
-      <div class="sol-card">
-        <div class="sol-title">Cabin Heating &mdash; Automated to Site Hours</div>
-        <p class="sol-body">Shelly relays at the fused spur of each heater put every cabin on a schedule. Heating runs when the site is occupied and stops when it is not. For early starts or ad-hoc use, a hardwired boost button beside each heater gives workers on-demand warmth for a set period &mdash; no app, no login, no friction. Remote triggering is also available: cabins can be switched on before a crew arrives via a simple notification or message.</p>
+<!-- THE PROBLEM -->
+<div class="ph">
+  <div class="ph-inner">
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">The Problem</span></div></div>
+    <div class="three">
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin-bottom:0">Cabin Heaters</h3>
+          <span class="badge badge-navy">Always On</span>
+        </div>
+        <p class="body-sm">Heaters running constantly, all night, all weekend and when unoccupied during different project phases — left on "just in case".</p>
       </div>
-      <div class="sol-card green">
-        <div class="sol-title">Transformer Control &mdash; Off When Not Needed</div>
-        <p class="sol-body">Shelly controls transformer switching by time, or by time and load. Transformers power down after hours and restart in a staggered sequence each morning to prevent the load spike that causes breaker trips. Modern MCBs resolve the compatibility issue entirely &mdash; a straightforward one-off change that makes automated switching safe and reliable.</p>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin-bottom:0">Transformers</h3>
+          <span class="badge badge-navy">Always On</span>
+        </div>
+        <p class="body-sm">Large transformers staying energised after hours because turning them off trips the breaker. So nobody does.</p>
       </div>
-      <div class="sol-card" style="border-left-color:var(--ink)">
-        <div class="sol-title">Metering &mdash; Prove the Saving Before You Spend</div>
-        <p class="sol-body">A single energy meter on the site incomer gives the full picture of out-of-hours consumption within days of installation. Additional meters per cabin or cabin group provide granular visibility. Water meters layer in alongside power data. Everything appears in one dashboard &mdash; real time, remotely accessible, no site visit required.</p>
-        <ul class="sol-list">
-          <li>Patterns visible within days of installation</li>
-          <li>Quantify waste before committing to full rollout</li>
-          <li>Data to build the business case internally</li>
-        </ul>
-      </div>
-      <div class="sol-card" style="border-left-color:var(--ink-3)">
-        <div class="sol-title">Fleet Dashboard &mdash; Every Site, One Interface</div>
-        <p class="sol-body">Shelly Fleet Manager provides centralised control and visibility across every site simultaneously. Control per device, per group, per site, or across the full estate. Automations apply at fleet scale. Every action is logged. Human override is always available &mdash; at device level, group level, or site level. The system works around the crew, not against it.</p>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin-bottom:0">No Visibility</h3>
+          <span class="badge badge-navy">No Data</span>
+        </div>
+        <p class="body-sm">No knowledge of the excess and out-of-hours power use, so costs are just accepted. Without data there is no starting point.</p>
       </div>
     </div>
   </div>
 </div>
 <div class="hr"></div>
 
-<div class="hw-section">
-  <div class="hw-inner">
-    <div class="tag" style="margin-bottom:12px">Hardware Required</div>
-    <h2 class="h2" style="margin-bottom:8px">Straightforward to install. Significant in impact.</h2>
-    <p class="body-md" style="max-width:600px">All devices are supplied by Jaly as Ireland&rsquo;s authorised Shelly distributor. Installation is carried out by your existing M&amp;E contractor from Jaly wiring documentation.</p>
-    <div class="hw-grid">
-      <div class="hw-card">
-        <div class="hw-cat">Metering</div>
-        <div class="hw-title">Main Incomer Meter</div>
-        <p class="hw-body">Shelly EM / 3EM on the site main supply. Single or three-phase. Full site consumption in real time.</p>
-      </div>
-      <div class="hw-card">
-        <div class="hw-cat">Metering</div>
-        <div class="hw-title">Cabin / Group Meters</div>
-        <p class="hw-body">Per-cabin or grouped metering for granular visibility of high-consumption areas and individual load profiling.</p>
-      </div>
-      <div class="hw-card">
-        <div class="hw-cat">Control</div>
-        <div class="hw-title">Heater &amp; Transformer Relays</div>
-        <p class="hw-body">Shelly relay wired at the fused spur of each heater and transformer control point. No rewire of existing circuits required.</p>
-      </div>
-      <div class="hw-card">
-        <div class="hw-cat">Control</div>
-        <div class="hw-title">Thermostats</div>
-        <p class="hw-body">Smart TRVs or in-line thermostats ensure target temperatures are met &mdash; not exceeded. Prevents over-heating as well as out-of-hours heating.</p>
-      </div>
-      <div class="hw-card">
-        <div class="hw-cat">On-Site Override</div>
-        <div class="hw-title">Boost Buttons</div>
-        <p class="hw-body">Hardwired wall switch beside each heater. One press activates a timed boost. No app, no network, no training required.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="result-section">
-  <div class="result-inner">
-    <div class="tag">The Result</div>
-    <h2 class="h2" style="color:var(--white);margin-top:12px;margin-bottom:40px">Measurable outcomes from day one.</h2>
-    <div class="result-grid">
-      <div class="result-card b">
-        <div class="result-title">Right Temperature at the Right Time</div>
-        <p class="result-body">Cabins reach working temperature before crews arrive and cool down after the last person leaves. No more overheated empty site offices. No more cold starts.</p>
-      </div>
-      <div class="result-card g">
-        <div class="result-title">Transformers Off When Not Needed</div>
-        <p class="result-body">Large loads eliminated outside working hours. Staggered morning start prevents power spikes. Energy used only when work demands it.</p>
-      </div>
-      <div class="result-card a">
-        <div class="result-title">Measurable Cost Savings</div>
-        <p class="result-body">&euro;1,500+ per site per week in identified out-of-hours savings. Hardware recovered in as little as one week. Savings compound across every site in the estate. Millions in annual savings at national scale.</p>
-      </div>
-      <div class="result-card w">
-        <div class="result-title">Sustainable Construction</div>
-        <p class="result-body">Reduced energy consumption regardless of source &mdash; generator, battery, or grid. Supports ESG commitments and sustainability reporting. A scaleable proof of concept from a single cabin area.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bacs-section">
-  <div class="bacs-inner">
-    <div>
-      <div class="tag" style="margin-bottom:12px">Regulatory Context</div>
-      <h2 class="h2" style="margin-bottom:16px">BACS regulations are already in force.</h2>
-      <p class="body-md" style="margin-bottom:16px">Irish law (S.I. 393 of 2021, transposing the EU Energy Performance of Buildings Directive) requires non-residential buildings with combined heating, cooling, and ventilation output above 290&nbsp;kW to have a Building Automation and Control System installed. The compliance deadline was 31 December 2024.</p>
-      <p class="body-md" style="margin-bottom:16px">For construction companies with large site offices and accommodation, this threshold is likely to be relevant across the estate. The compliance assessment requires a feasibility study by an independent competent professional.</p>
-      <p class="body-md" style="margin-bottom:0">A properly designed and commissioned Jaly system delivers BACS-compliant functionality &mdash; putting you on the right side of the regulation while generating a direct commercial return.</p>
-      <div class="bacs-callout">
-        <div class="bacs-callout-title">Feasibility Threshold</div>
-        <p class="bacs-callout-body">The economic feasibility test for BACS installation is a payback period of 3 years for commercial buildings. At &euro;1,500 per site per week in identified savings, the Jaly construction solution achieves payback in weeks &mdash; clearing this threshold by an order of magnitude.</p>
-      </div>
-    </div>
-    <div>
-      <p class="tag" style="margin-bottom:16px">EN ISO 52120-1:2022 &mdash; BACS Classification</p>
-      <div class="bacs-classes">
-        <div class="bacs-class">
-          <div class="bacs-class-badge a">A</div>
-          <div><div class="bacs-class-title">High energy performance automation</div><p class="bacs-class-body">Advanced BAC with full technical building management. Predictive control, demand response, detailed reporting.</p></div>
+<!-- THE SOLUTION -->
+<div class="ph">
+  <div class="ph-inner">
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">The Solution</span></div></div>
+    <div class="three">
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin-bottom:0">Cabin Heaters</h3>
+          <span class="badge badge-blue">Scheduled</span>
         </div>
-        <div class="bacs-class">
-          <div class="bacs-class-badge b">B</div>
-          <div><div class="bacs-class-title">Advanced automation</div><p class="bacs-class-body">Advanced BAC with some technical building management. Energy monitoring, automated scheduling, fleet control.</p></div>
+        <p class="body-sm">Heating runs to site hours with manual boost available. Hardwired wall buttons give workers on-demand warmth for a set period. Cabins are the correct temperature at the right time.</p>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin-bottom:0">Transformers</h3>
+          <span class="badge badge-blue">Automated</span>
         </div>
-        <div class="bacs-class" style="background:rgba(0,71,204,0.04)">
-          <div class="bacs-class-badge c">C</div>
-          <div><div class="bacs-class-title">Standard automation &mdash; minimum compliant</div><p class="bacs-class-body">Standard BAC with centralised monitoring and automated control. The minimum required by the EPBD Regulations. <strong style="color:var(--blue)">A Jaly system meets or exceeds this.</strong></p></div>
+        <p class="body-sm">Transformers controlled by time and/or load with staggered starts and modern MCBs to avoid startup issues. Switched off after hours, back on before the crew arrives.</p>
+      </div>
+      <div class="card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin-bottom:0">Fleet Dashboard</h3>
+          <span class="badge badge-blue">Immediate</span>
         </div>
-        <div class="bacs-class">
-          <div class="bacs-class-badge d">D</div>
-          <div><div class="bacs-class-title">Non-compliant &mdash; must be replaced</div><p class="bacs-class-body">Manual or non-energy-efficient controls. New buildings cannot be built with Class D systems. Existing buildings must be upgraded.</p></div>
-        </div>
+        <p class="body-sm">Savings begin the moment the devices are installed. Web-based portal for visibility and control of all devices across multiple sites. Payback is typically seen in 2&ndash;4 weeks.</p>
       </div>
     </div>
   </div>
 </div>
 <div class="hr"></div>
 
-<div class="cs-section" id="case-study">
-  <div class="cs-inner">
-    <div class="tag" style="margin-bottom:12px">Case Study</div>
-    <h2 class="h2">Tier One Irish Building Contractor &mdash; National Rollout</h2>
-    <div class="cs-card">
+<!-- THE RESULT -->
+<div class="ph">
+  <div class="ph-inner">
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">The Result</span></div></div>
+    <div class="three">
+      <div class="card-off">
+        <h3>Measurable Benefits</h3>
+        <p class="body-sm">What started as a hunch has identified up to &euro;1,500 in weekly savings per site. Benefits are immediate with payback from 1&ndash;4 weeks typically.</p>
+      </div>
+      <div class="card-off">
+        <h3>Sustainability</h3>
+        <p class="body-sm">Overall reduced energy consumption regardless of source &mdash; batteries, generators or grid. Supports ESG goals and commitments across your estate.</p>
+      </div>
+      <div class="card-off">
+        <h3>Scaleable Solution</h3>
+        <p class="body-sm">Proof of value can be achieved via a single site area, reducing initial investment and de-risking the decision before a full rollout.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hr"></div>
+
+<!-- OUR METHODS -->
+<div class="ph">
+  <div class="ph-inner">
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Our Methods</span></div></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div class="card-off">
+        <h3>Fleet Dashboard</h3>
+        <p class="body-sm">Web-based portal for visibility and control of all devices across multiple sites. Easily see what is in use and switch it off. Automations and control can be per device, group, site, or globally.</p>
+      </div>
+      <div class="card-off">
+        <h3>Heating Controls</h3>
+        <p class="body-sm">Control and automate heating infrastructure to ensure energy efficiency and reduce waste in unused areas and out of hours. Monitor drying rooms for issues and required operation.</p>
+      </div>
+      <div class="card-off">
+        <h3>Transformer Management</h3>
+        <p class="body-sm">Large transformers are often left online 24/7. Automating their operating times can save thousands of euros per month across a site estate.</p>
+      </div>
+      <div class="card-off">
+        <h3>Lighting</h3>
+        <p class="body-sm">Sensor lights are common but not always practical. Automating certain controls and switching off mass devices when not required enables a more efficient and sustainable site.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="hr"></div>
+
+<!-- CASE STUDY -->
+<div style="background:var(--navy);padding:64px 0">
+  <div class="ph-inner">
+    <p style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px">Case Study</p>
+    <h2 class="h2" style="color:var(--white);margin-bottom:20px">Irish Tier 1 Contractor</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;max-width:680px;margin-bottom:14px">Our client suspected high out-of-hours electricity usage and reached out seeking assistance in identifying and reducing this wastage. A single meter was supplied to prove the wasted volume and calculate potential savings.</p>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;max-width:680px;margin-bottom:14px">Following this, they tested relay devices for proof of concept and subsequently commenced a pilot site ahead of a full rollout.</p>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.75;max-width:680px;margin-bottom:32px">The full project scope includes over 50 sites, with annual savings estimated to be in the millions. Jaly are providing Design, Supply and Commissioning Services for this project.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.1)">
+      <div style="background:rgba(255,255,255,0.04);padding:24px;text-align:center"><div style="font-size:24px;font-weight:800;color:var(--cyan);margin-bottom:4px">&euro;1,500+</div><div style="font-size:12px;color:rgba(255,255,255,0.45)">Weekly savings identified<br>per site</div></div>
+      <div style="background:rgba(255,255,255,0.04);padding:24px;text-align:center"><div style="font-size:24px;font-weight:800;color:var(--cyan);margin-bottom:4px">50+</div><div style="font-size:12px;color:rgba(255,255,255,0.45)">Sites in planned<br>national rollout</div></div>
+      <div style="background:rgba(255,255,255,0.04);padding:24px;text-align:center"><div style="font-size:24px;font-weight:800;color:var(--cyan);margin-bottom:4px">Millions</div><div style="font-size:12px;color:rgba(255,255,255,0.45)">Estimated annual savings<br>across full estate</div></div>
+      <div style="background:rgba(255,255,255,0.04);padding:24px;text-align:center"><div style="font-size:24px;font-weight:800;color:var(--cyan);margin-bottom:4px">1&ndash;4 wks</div><div style="font-size:12px;color:rgba(255,255,255,0.45)">Typical payback<br>period</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BACS -->
+<div class="ph" style="background:var(--off)">
+  <div class="ph-inner">
+    <div class="band"><div class="band-inner"><div class="band-bar"></div><span class="band-txt">Regulatory</span></div></div>
+    <div class="two">
       <div>
-        <div class="cs-label">The Engagement</div>
-        <div class="cs-title">From a hunch to a national programme.</div>
-        <div class="cs-body">
-          <p>A tier one Irish building contractor identified that out-of-hours electricity use across its site network was likely significant, but had no data to quantify it. Jaly supplied a single energy meter to a representative site. Within days, the scale of out-of-hours consumption was confirmed and savings were calculated.</p>
-          <p>Following proof of concept, relay devices were tested on a pilot cabin group to validate the control approach. A pilot site of ten cabins was then commissioned to refine the system ahead of full rollout.</p>
-          <p>The full programme covers 50+ sites nationally. Jaly is providing system design, hardware supply, and commissioning services throughout. Over 4,000 Shelly devices are planned across metering, relay control, and switching infrastructure.</p>
-        </div>
+        <h2 class="h2" style="margin-bottom:16px">BACS Regulations &mdash; already in force</h2>
+        <p class="body-md" style="margin-bottom:14px">Non-residential buildings with heating, cooling, and ventilation systems above 290kW were required to install Building Automation and Control Systems by 31 December 2024 under S.I. 393 of 2021.</p>
+        <p class="body-md" style="margin-bottom:24px">A properly designed and commissioned Jaly system delivers BACS-compliant functionality. There are numerous other use cases and potential benefits we can explore with you.</p>
+        <a href="contact.html" class="btn btn-navy">Discuss Your Requirements</a>
       </div>
-      <div>
-        <div class="cs-label" style="margin-bottom:16px">Key Figures</div>
-        <div class="cs-stats">
-          <div class="cs-stat">
-            <div class="cs-stat-num">&euro;1,500<span style="font-size:16px;color:var(--ink-3)">+</span></div>
-            <p class="cs-stat-lbl">Weekly savings identified per site from out-of-hours consumption alone</p>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">1&ndash;4 <span style="font-size:16px;color:var(--ink-3)">wks</span></div>
-            <p class="cs-stat-lbl">Typical hardware payback period once devices are installed and live</p>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">50<span style="font-size:16px;color:var(--ink-3)">+ sites</span></div>
-            <p class="cs-stat-lbl">Planned full rollout across the national site estate</p>
-          </div>
-          <div class="cs-stat">
-            <div class="cs-stat-num">4,000<span style="font-size:16px;color:var(--ink-3)">+</span></div>
-            <p class="cs-stat-lbl">Shelly devices planned across metering, relays, and switching</p>
-          </div>
-        </div>
-        <p class="cs-note">Client anonymised. Electrical contractor available for verification on request.</p>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--rule)">
+        <div style="background:var(--white);padding:16px 20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">Legal requirement since 31 December 2024</p><p class="body-sm">Non-residential buildings above 290kW HVAC output must have BACS installed.</p></div>
+        <div style="background:var(--white);padding:16px 20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">3-year payback threshold for commercial buildings</p><p class="body-sm">The feasibility exemption is based on a 3-year maximum payback. Jaly systems typically pay back in weeks.</p></div>
+        <div style="background:var(--white);padding:16px 20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">EN ISO 52120-1:2022</p><p class="body-sm">The international standard referenced in the EU Energy Performance of Buildings Directive. Classes D through A.</p></div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- CTA -->
 <div class="cta-band">
   <div class="cta-inner">
     <div>
-      <h2 class="cta-h">Ready to see what your sites are actually using?</h2>
-      <p class="cta-b">A single meter is all it takes to prove the case. Start with a conversation &mdash; no commitment required.</p>
+      <h2 class="cta-h">Start with a scoping conversation.</h2>
+      <p class="cta-b">No commitment required. We will visit site, understand your setup, and tell you exactly what is possible and what it would cost.</p>
     </div>
-    <a href="contact.html" class="btn btn-white">Start a Conversation &rarr;</a>
+    <a href="contact.html" class="btn btn-cyan" style="white-space:nowrap;font-size:14px;padding:0 28px;height:46px">Get in Touch &rarr;</a>
   </div>
 </div>
-<footer><div class="ft-inner">
-<div class="ft-top">
-  <div><a href="index.html" class="ft-logo">Jaly<em>.</em>ie</a><p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p><div class="ft-badge">Authorised Shelly<b>B2B Partner</b></div></div>
-  <div class="ft-col"><h5>Services</h5><ul><li><a href="what-we-do.html">System Design</a></li><li><a href="what-we-do.html">Hardware Supply</a></li><li><a href="what-we-do.html">Installation</a></li><li><a href="what-we-do.html">Commissioning</a></li></ul></div>
-  <div class="ft-col"><h5>Sectors</h5><ul><li><a href="construction.html">Construction</a></li><li><a href="use-cases.html">Hospitality</a></li><li><a href="use-cases.html">Commercial</a></li><li><a href="use-cases.html">All Use Cases</a></li></ul></div>
-  <div class="ft-col"><h5>Company</h5><ul><li><a href="projects.html">Projects</a></li><li><a href="technology.html">Technology</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Privacy Policy</a></li></ul></div>
-</div>
-<div class="ft-bot"><p>&copy; 2025 Jaly.ie &mdash; All rights reserved</p><p>Authorised Shelly distributor &mdash; Republic and Northern Ireland</p></div>
-</div></footer></body>
-</html>
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <a href="index.html" class="ft-logo">jaly</a>
+        <p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p>
+        <div class="ft-badge">Authorised Shelly B2B Distributor &mdash; Ireland</div>
+      </div>
+      <div class="ft-col"><h5>Services</h5><ul>
+        <li><a href="what-we-do.html">System Design</a></li>
+        <li><a href="what-we-do.html">Hardware Supply</a></li>
+        <li><a href="what-we-do.html">Commissioning</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Explore</h5><ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="construction.html">Construction</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="mailto:info@jaly.ie">info@jaly.ie</a></li>
+        <li><a href="https://www.jaly.ie">www.jaly.ie</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>&copy; 2025 Jaly.ie</p>
+      <p>Authorised Shelly distributor &mdash; Republic and Northern Ireland</p>
+    </div>
+  </div>
+</footer></body></html>
