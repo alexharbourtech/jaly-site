@@ -18,10 +18,10 @@ nav{background:var(--navy);height:64px;padding:0}
 .n-links a.on{color:#fff;font-weight:600;border-bottom-color:var(--cyan)}
 .n-btn{background:var(--cyan);color:var(--navy);font-weight:700;font-size:13px;padding:0 18px;height:36px;display:inline-flex;align-items:center;border-radius:var(--r);text-decoration:none;flex-shrink:0}
 .hero{background:var(--navy);padding:72px 0 64px}
-.hero-i{max-width:1040px;margin:0 auto;padding:0 48px}
-.hero-2col{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center}
+.w{max-width:1040px;margin:0 auto;padding:0 48px}
 .kicker{font-size:11px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
 h1{font-size:52px;font-weight:900;line-height:1.01;letter-spacing:-0.04em;color:#fff;margin-bottom:18px}
+.hero-2col{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:center}
 .hero-desc{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:28px}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn-c{background:var(--cyan);color:var(--navy);font-weight:700;font-size:13px;padding:11px 22px;border-radius:var(--r);text-decoration:none}
@@ -38,9 +38,8 @@ h1{font-size:52px;font-weight:900;line-height:1.01;letter-spacing:-0.04em;color:
 .val-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
 .val-body{font-size:13px;color:var(--ink3);line-height:1.6}
 .ph{padding:64px 0}
-.phi{max-width:1040px;margin:0 auto;padding:0 48px}
-h2{font-size:34px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:12px}
-.sub{font-size:15px;color:var(--ink3);line-height:1.75;max-width:580px;margin-bottom:32px}
+h2{font-size:32px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:12px}
+.sub{font-size:15px;color:var(--ink3);line-height:1.75;max-width:580px;margin-bottom:36px}
 .hr{height:1px;background:var(--rule)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -63,14 +62,15 @@ h2{font-size:34px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin
 .list-item{background:var(--white);padding:14px 18px}
 .list-item p{font-size:13px;color:var(--ink2);line-height:1.65}
 .list-item strong{color:var(--navy)}
-.cta{background:var(--navy);padding:56px 0}
-.cta-i{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:40px}
-.cta-i h2{font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:8px}
-.cta-i p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
 .badge{display:inline-flex;padding:2px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
 .badge-navy{background:var(--navy);color:#fff}
 .badge-blue{background:var(--blue);color:#fff}
 .badge-cyan{background:var(--cyan);color:var(--navy)}
+.dark-band{background:var(--navy);padding:64px 0}
+.cta{background:var(--navy);padding:56px 0}
+.cta-i{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.cta-i h2{font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:8px}
+.cta-i p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
 footer{background:#040f24;padding:48px 0 28px}
 .ft-i{max-width:1040px;margin:0 auto;padding:0 48px}
 .ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:20px}
@@ -92,86 +92,54 @@ footer{background:#040f24;padding:48px 0 28px}
 .f-sub{width:100%;background:var(--navy);color:#fff;border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:600;border-radius:var(--r);cursor:pointer;margin-top:4px}</style>
 </head>
 <body>
-<nav>
-  <div class="nav-i">
-    <a href="index.html" class="n-logo"><svg id="Layer_1" width="110" height="48" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 209.78 92.44">
-  <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.3 Build 182)  -->
-  <defs>
-    <style>
-      .st0 {
-        fill: none;
-        stroke: #3fc2e7;
-        stroke-miterlimit: 10;
-        stroke-width: 6px;
-      }
+<script src="nav.js"></script>
 
-      .st1 {
-        fill: #ffffff;
-        font-family: MyriadPro-Regular, 'Myriad Pro';
-        font-size: 70.54px;
-      }
-    </style>
-  </defs>
-  <path class="st0" d="M82.33,46.22c0-19.32-15.68-35-35-35S12.33,26.9,12.33,46.22s15.68,35,35,35,35-15.68,35-35"/>
-  <text class="st1" transform="translate(101.33 66.92)"><tspan x="0" y="0">jaly</tspan></text>
-</svg></a>
-    <ul class="n-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="what-we-do.html">What We Do</a></li>
-      <li><a href="use-cases.html">Use Cases</a></li>
-      <li><a href="technology.html"  class='on'>Technology</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="contact.html" class="n-btn">Enquire Now</a>
-  </div>
-</nav>
-<div class="hero">
-  <div class="hero-i">
-    <p class="kicker">Platform</p>
-    <h1>Built on Shelly.</h1>
-    <p class="hero-desc">Jaly is an authorised Shelly B2B distributor for Ireland. Shelly&rsquo;s professional IoT platform provides the hardware, connectivity, and software backbone for every system we design and commission.</p>
-  </div>
-</div>
-<div class="ph">
-  <div class="phi">
-    <div class="two" style="margin-bottom:56px;align-items:center">
-      <div>
-        <h2 style="margin-bottom:16px">Professional-grade.<br>No subscription fees.</h2>
-        <p style="font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:14px">The Shelly Pro range is built for commercial and industrial deployment &mdash; DIN rail mounting, panel-grade installation, and up to 5-year manufacturer warranty. Every device has a fully open API via REST, MQTT, webhooks, and WebSocket.</p>
-        <p style="font-size:14px;color:var(--ink2);line-height:1.75">No cloud lock-in. No subscription fees. Local-first, with cloud connectivity as an option rather than a requirement.</p>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)">
-        <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">28M+ devices</p><p style="font-size:13px;color:var(--ink3)">Deployed across 100+ countries</p></div>
-        <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">5yr warranty</p><p style="font-size:13px;color:var(--ink3)">Shelly Pro range, panel-grade</p></div>
-        <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">Open API</p><p style="font-size:13px;color:var(--ink3)">REST, MQTT, webhooks, WebSocket</p></div>
-        <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">No fees</p><p style="font-size:13px;color:var(--ink3)">No subscription, no cloud lock-in</p></div>
-      </div>
+<div class="hero"><div class="w">
+  <p class="kicker">Platform</p>
+  <h1>Built on Shelly.</h1>
+  <p class="hero-desc">Jaly is an authorised Shelly B2B distributor for Ireland. Shelly&rsquo;s professional IoT platform provides the hardware, connectivity, and software backbone for every system we design and commission.</p>
+</div></div>
+<div class="ph"><div class="w">
+  <div class="two" style="margin-bottom:56px;align-items:center">
+    <div>
+      <h2 style="margin-bottom:16px">Professional-grade.<br>No subscription fees.</h2>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:14px">The Shelly Pro range is built for commercial and industrial deployment &mdash; DIN rail mounting, panel-grade installation, and up to 5-year manufacturer warranty. Every device has a fully open API via REST, MQTT, webhooks, and WebSocket.</p>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.75">No cloud lock-in. No subscription fees. Local-first, with cloud connectivity as an option rather than a requirement.</p>
     </div>
-    <div class="hr" style="margin-bottom:48px"></div>
-    <h2 style="margin-bottom:28px">Key Products</h2>
-    <div class="three" style="margin-bottom:56px">
-      <div class="card-off"><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Metering</p><h3>Shelly Pro 3EM</h3><p style="margin-bottom:8px">Three-phase or single-phase &times;3 energy meter with CT clamps. DIN rail mount. Real-time consumption data. RRP &euro;132.05 ex VAT.</p><p style="font-size:11px;color:var(--ink4)">120&ndash;400A per channel</p></div>
-      <div class="card-off"><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Control</p><h3>Shelly Pro 2PM</h3><p style="margin-bottom:8px">Two-channel relay with power monitoring. DIN rail mount. 16A per channel, 25A max load. RRP &euro;83.44 ex VAT.</p><p style="font-size:11px;color:var(--ink4)">Panel-grade installation</p></div>
-      <div class="card-off"><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Control</p><h3>Shelly 1PM</h3><p style="margin-bottom:8px">Single-channel relay with power monitoring. In-wall or DIN. Max 16A. Two-channel version available. RRP &euro;18.48 ex VAT.</p><p style="font-size:11px;color:var(--ink4)">Compact in-wall installation</p></div>
-    </div>
-    <div class="hr" style="margin-bottom:48px"></div>
-    <h2 style="margin-bottom:16px">Fleet Manager</h2>
-    <div class="two">
-      <div>
-        <p style="font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:14px">Fleet Manager is Shelly&rsquo;s multi-site management platform. Pre-loaded configurations can be pushed to hundreds of devices simultaneously &mdash; significantly reducing commissioning time on large rollouts.</p>
-        <p style="font-size:14px;color:var(--ink2);line-height:1.75">Control per device, per group, per site, or across the full estate. Automations based on time, events, environment, or external triggers. Manual override always available.</p>
-      </div>
-      <div class="list-items">
-        <div class="list-item"><p><strong>Multi-site management</strong> &mdash; all devices across all sites in one interface</p></div>
-        <div class="list-item"><p><strong>Pre-loaded configs</strong> &mdash; push settings at scale on large rollouts</p></div>
-        <div class="list-item"><p><strong>Event-based automations</strong> &mdash; time, load, environment, external triggers</p></div>
-        <div class="list-item"><p><strong>Manual override</strong> &mdash; always available on-site or remotely</p></div>
-        <div class="list-item"><p><strong>Open API</strong> &mdash; integrate with existing BMS, SCADA, or custom dashboards</p></div>
-      </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)">
+      <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">28M+ devices</p><p style="font-size:13px;color:var(--ink3)">Deployed across 100+ countries</p></div>
+      <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">5yr warranty</p><p style="font-size:13px;color:var(--ink3)">Shelly Pro range, panel-grade</p></div>
+      <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">Open API</p><p style="font-size:13px;color:var(--ink3)">REST, MQTT, webhooks, WebSocket</p></div>
+      <div style="background:var(--off);padding:20px"><p style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px">No fees</p><p style="font-size:13px;color:var(--ink3)">No subscription, no cloud lock-in</p></div>
     </div>
   </div>
-</div>
-<div class="cta"><div class="cta-i"><div><h2 style="color:#fff">Interested in what Shelly can do?</h2><p>Start with a scoping conversation. We will assess your situation and explain what is possible.</p></div><a href="contact.html" class="btn-c">Get in Touch &rarr;</a></div></div>
+  <div class="hr" style="margin-bottom:48px"></div>
+  <h2 style="margin-bottom:28px">Key Products</h2>
+  <div class="three" style="margin-bottom:56px">
+    <div class="card-off"><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Metering</p><h3>Shelly Pro 3EM</h3><p style="margin-bottom:8px">Three-phase or single-phase &times;3 energy meter with CT clamps. DIN rail mount. Real-time consumption data. RRP &euro;132.05 ex VAT.</p><p style="font-size:11px;color:var(--ink4)">120&ndash;400A per channel</p></div>
+    <div class="card-off"><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Control</p><h3>Shelly Pro 2PM</h3><p style="margin-bottom:8px">Two-channel relay with power monitoring. DIN rail mount. 16A per channel, 25A max load. RRP &euro;83.44 ex VAT.</p><p style="font-size:11px;color:var(--ink4)">Panel-grade installation</p></div>
+    <div class="card-off"><p style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:8px">Control</p><h3>Shelly 1PM</h3><p style="margin-bottom:8px">Single-channel relay with power monitoring. In-wall or DIN. Max 16A. Two-channel version available. RRP &euro;18.48 ex VAT.</p><p style="font-size:11px;color:var(--ink4)">Compact in-wall installation</p></div>
+  </div>
+  <div class="hr" style="margin-bottom:48px"></div>
+  <h2 style="margin-bottom:16px">Fleet Manager</h2>
+  <div class="two">
+    <div>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:14px">Fleet Manager is Shelly&rsquo;s multi-site management platform. Pre-loaded configurations can be pushed to hundreds of devices simultaneously &mdash; significantly reducing commissioning time on large rollouts.</p>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.75">Control per device, per group, per site, or across the full estate. Automations based on time, events, environment, or external triggers. Manual override always available.</p>
+    </div>
+    <div class="list-items">
+      <div class="list-item"><p><strong>Multi-site management</strong> &mdash; all devices across all sites in one interface</p></div>
+      <div class="list-item"><p><strong>Pre-loaded configs</strong> &mdash; push settings at scale on large rollouts</p></div>
+      <div class="list-item"><p><strong>Event-based automations</strong> &mdash; time, load, environment, external triggers</p></div>
+      <div class="list-item"><p><strong>Manual override</strong> &mdash; always available on-site or remotely</p></div>
+      <div class="list-item"><p><strong>Open API</strong> &mdash; integrate with existing BMS, SCADA, or custom dashboards</p></div>
+    </div>
+  </div>
+</div></div>
+<div class="cta"><div class="cta-i">
+  <div><h2 style="color:#fff">Interested in what Shelly can do?</h2><p>Start with a scoping conversation. We will assess your situation and explain what is possible.</p></div>
+  <a href="contact.html" class="btn-c">Get in Touch &rarr;</a>
+</div></div>
 <footer>
   <div class="ft-i">
     <div class="ft-top">
@@ -200,14 +168,14 @@ footer{background:#040f24;padding:48px 0 28px}
         <p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p>
         <div class="ft-badge">Authorised Shelly B2B Distributor &mdash; Ireland</div>
       </div>
-      <div class="ft-col"><h5>Services</h5><ul>
-        <li><a href="what-we-do.html">System Design</a></li>
-        <li><a href="what-we-do.html">Hardware Supply</a></li>
-        <li><a href="what-we-do.html">Commissioning</a></li>
-      </ul></div>
-      <div class="ft-col"><h5>Explore</h5><ul>
+      <div class="ft-col"><h5>Company</h5><ul>
+        <li><a href="what-we-do.html">What We Do</a></li>
         <li><a href="use-cases.html">Use Cases</a></li>
         <li><a href="technology.html">Technology</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Trade</h5><ul>
+        <li><a href="installers.html">Installers</a></li>
+        <li><a href="distribution.html">Distribution</a></li>
       </ul></div>
       <div class="ft-col"><h5>Contact</h5><ul>
         <li><a href="contact.html">Get in Touch</a></li>

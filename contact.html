@@ -18,10 +18,10 @@ nav{background:var(--navy);height:64px;padding:0}
 .n-links a.on{color:#fff;font-weight:600;border-bottom-color:var(--cyan)}
 .n-btn{background:var(--cyan);color:var(--navy);font-weight:700;font-size:13px;padding:0 18px;height:36px;display:inline-flex;align-items:center;border-radius:var(--r);text-decoration:none;flex-shrink:0}
 .hero{background:var(--navy);padding:72px 0 64px}
-.hero-i{max-width:1040px;margin:0 auto;padding:0 48px}
-.hero-2col{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center}
+.w{max-width:1040px;margin:0 auto;padding:0 48px}
 .kicker{font-size:11px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
 h1{font-size:52px;font-weight:900;line-height:1.01;letter-spacing:-0.04em;color:#fff;margin-bottom:18px}
+.hero-2col{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:center}
 .hero-desc{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:28px}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn-c{background:var(--cyan);color:var(--navy);font-weight:700;font-size:13px;padding:11px 22px;border-radius:var(--r);text-decoration:none}
@@ -38,9 +38,8 @@ h1{font-size:52px;font-weight:900;line-height:1.01;letter-spacing:-0.04em;color:
 .val-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
 .val-body{font-size:13px;color:var(--ink3);line-height:1.6}
 .ph{padding:64px 0}
-.phi{max-width:1040px;margin:0 auto;padding:0 48px}
-h2{font-size:34px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:12px}
-.sub{font-size:15px;color:var(--ink3);line-height:1.75;max-width:580px;margin-bottom:32px}
+h2{font-size:32px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:12px}
+.sub{font-size:15px;color:var(--ink3);line-height:1.75;max-width:580px;margin-bottom:36px}
 .hr{height:1px;background:var(--rule)}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -63,14 +62,15 @@ h2{font-size:34px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin
 .list-item{background:var(--white);padding:14px 18px}
 .list-item p{font-size:13px;color:var(--ink2);line-height:1.65}
 .list-item strong{color:var(--navy)}
-.cta{background:var(--navy);padding:56px 0}
-.cta-i{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:40px}
-.cta-i h2{font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:8px}
-.cta-i p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
 .badge{display:inline-flex;padding:2px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
 .badge-navy{background:var(--navy);color:#fff}
 .badge-blue{background:var(--blue);color:#fff}
 .badge-cyan{background:var(--cyan);color:var(--navy)}
+.dark-band{background:var(--navy);padding:64px 0}
+.cta{background:var(--navy);padding:56px 0}
+.cta-i{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.cta-i h2{font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:8px}
+.cta-i p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
 footer{background:#040f24;padding:48px 0 28px}
 .ft-i{max-width:1040px;margin:0 auto;padding:0 48px}
 .ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:20px}
@@ -92,91 +92,55 @@ footer{background:#040f24;padding:48px 0 28px}
 .f-sub{width:100%;background:var(--navy);color:#fff;border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:600;border-radius:var(--r);cursor:pointer;margin-top:4px}</style>
 </head>
 <body>
-<nav>
-  <div class="nav-i">
-    <a href="index.html" class="n-logo"><svg id="Layer_1" width="110" height="48" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 209.78 92.44">
-  <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.3 Build 182)  -->
-  <defs>
-    <style>
-      .st0 {
-        fill: none;
-        stroke: #3fc2e7;
-        stroke-miterlimit: 10;
-        stroke-width: 6px;
-      }
+<script src="nav.js"></script>
 
-      .st1 {
-        fill: #ffffff;
-        font-family: MyriadPro-Regular, 'Myriad Pro';
-        font-size: 70.54px;
-      }
-    </style>
-  </defs>
-  <path class="st0" d="M82.33,46.22c0-19.32-15.68-35-35-35S12.33,26.9,12.33,46.22s15.68,35,35,35,35-15.68,35-35"/>
-  <text class="st1" transform="translate(101.33 66.92)"><tspan x="0" y="0">jaly</tspan></text>
-</svg></a>
-    <ul class="n-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="what-we-do.html">What We Do</a></li>
-      <li><a href="use-cases.html">Use Cases</a></li>
-      <li><a href="technology.html">Technology</a></li>
-      <li><a href="contact.html"  class='on'>Contact</a></li>
-    </ul>
-    <a href="contact.html" class="n-btn">Enquire Now</a>
-  </div>
-</nav>
-<div class="hero">
-  <div class="hero-i">
-    <p class="kicker">Get in Touch</p>
-    <h1>Start a conversation.</h1>
-    <p class="hero-desc" style="max-width:440px">No commitment required. Tell us about your project and we will come back to you within one business day.</p>
-  </div>
-</div>
-<div class="ph">
-  <div class="phi">
-    <div class="two">
-      <div>
-        <h2 style="margin-bottom:24px">Send a Message</h2>
-        <form>
-          <div class="f-row">
-            <div class="f-grp"><label class="f-lbl">First Name</label><input class="f-inp" type="text" placeholder="Alex"></div>
-            <div class="f-grp"><label class="f-lbl">Last Name</label><input class="f-inp" type="text" placeholder="Smith"></div>
-          </div>
-          <div class="f-grp"><label class="f-lbl">Email</label><input class="f-inp" type="email" placeholder="alex@company.ie"></div>
-          <div class="f-grp"><label class="f-lbl">Company</label><input class="f-inp" type="text" placeholder="Your organisation"></div>
-          <div class="f-grp"><label class="f-lbl">Sector</label>
-            <select class="f-sel">
-              <option value="">Select sector...</option>
-              <option>Construction</option>
-              <option>Hospitality</option>
-              <option>Commercial / Facilities</option>
-              <option>Residential</option>
-              <option>Energy / Utilities</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="f-grp"><label class="f-lbl">Tell us about your project</label><textarea class="f-ta" placeholder="What are you trying to achieve? What does your site or building look like?"></textarea></div>
-          <button type="submit" class="f-sub">Send Message</button>
-          <p style="font-size:11px;color:var(--ink4);text-align:center;margin-top:8px">We respond within one business day.</p>
-        </form>
+<div class="hero"><div class="w">
+  <p class="kicker">Get in Touch</p>
+  <h1>Start a conversation.</h1>
+  <p class="hero-desc" style="max-width:440px">No commitment required. Tell us about your project and we will come back to you within one business day.</p>
+</div></div>
+<div class="ph"><div class="w">
+  <div class="two">
+    <div>
+      <h2 style="margin-bottom:24px">Send a Message</h2>
+      <form>
+        <div class="f-row">
+          <div class="f-grp"><label class="f-lbl">First Name</label><input class="f-inp" type="text" placeholder="Alex"></div>
+          <div class="f-grp"><label class="f-lbl">Last Name</label><input class="f-inp" type="text" placeholder="Smith"></div>
+        </div>
+        <div class="f-grp"><label class="f-lbl">Email</label><input class="f-inp" type="email" placeholder="alex@company.ie"></div>
+        <div class="f-grp"><label class="f-lbl">Company</label><input class="f-inp" type="text" placeholder="Your organisation"></div>
+        <div class="f-grp"><label class="f-lbl">Enquiry Type</label>
+          <select class="f-sel">
+            <option value="">Select...</option>
+            <option>System Design &amp; Commissioning</option>
+            <option>Installer Programme</option>
+            <option>Distribution / Trade Account</option>
+            <option>Hardware Supply</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="f-grp"><label class="f-lbl">Tell us about your project or requirement</label><textarea class="f-ta" placeholder="What are you trying to achieve? What does your site or building look like?"></textarea></div>
+        <button type="submit" class="f-sub">Send Message</button>
+        <p style="font-size:11px;color:var(--ink4);text-align:center;margin-top:8px">We respond within one business day.</p>
+      </form>
+    </div>
+    <div>
+      <h2 style="margin-bottom:24px">Direct Contact</h2>
+      <div style="display:flex;flex-direction:column;gap:1px;background:var(--rule);margin-bottom:36px">
+        <div style="background:var(--off);padding:20px 24px"><p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px">Email</p><a href="mailto:info@jaly.ie" style="font-size:16px;font-weight:600;color:var(--navy);text-decoration:none">info@jaly.ie</a></div>
+        <div style="background:var(--off);padding:20px 24px"><p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px">Website</p><a href="https://www.jaly.ie" style="font-size:16px;font-weight:600;color:var(--navy);text-decoration:none">www.jaly.ie</a></div>
+        <div style="background:var(--off);padding:20px 24px"><p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px">Coverage</p><p style="font-size:15px;font-weight:500;color:var(--ink2)">Republic &amp; Northern Ireland</p></div>
       </div>
-      <div>
-        <h2 style="margin-bottom:24px">Direct Contact</h2>
-        <div style="display:flex;flex-direction:column;gap:1px;background:var(--rule);margin-bottom:36px">
-          <div style="background:var(--off);padding:20px 24px"><p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px">Email</p><a href="mailto:info@jaly.ie" style="font-size:16px;font-weight:600;color:var(--navy);text-decoration:none">info@jaly.ie</a></div>
-          <div style="background:var(--off);padding:20px 24px"><p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px">Website</p><a href="https://www.jaly.ie" style="font-size:16px;font-weight:600;color:var(--navy);text-decoration:none">www.jaly.ie</a></div>
-          <div style="background:var(--off);padding:20px 24px"><p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4);margin-bottom:4px">Coverage</p><p style="font-size:15px;font-weight:500;color:var(--ink2)">Republic &amp; Northern Ireland</p></div>
-        </div>
-        <h2 style="font-size:18px;margin-bottom:16px">What Happens Next</h2>
-        <div class="list-items">
-          <div class="list-item" style="display:flex;gap:14px"><div style="font-size:13px;font-weight:700;color:var(--blue);min-width:20px;flex-shrink:0">1</div><p style="font-size:13px;color:var(--ink3);line-height:1.65">We review your message and come back within one business day.</p></div>
-          <div class="list-item" style="display:flex;gap:14px"><div style="font-size:13px;font-weight:700;color:var(--blue);min-width:20px;flex-shrink:0">2</div><p style="font-size:13px;color:var(--ink3);line-height:1.65">A short call to understand your requirements and assess whether Jaly is the right fit.</p></div>
-          <div class="list-item" style="display:flex;gap:14px"><div style="font-size:13px;font-weight:700;color:var(--blue);min-width:20px;flex-shrink:0">3</div><p style="font-size:13px;color:var(--ink3);line-height:1.65">If appropriate, we arrange a site visit and produce a system design. Paid engagement with a hardware rebate on proceeding.</p></div>
-        </div>
+      <h2 style="font-size:18px;margin-bottom:16px">What Happens Next</h2>
+      <div class="list-items">
+        <div class="list-item" style="display:flex;gap:14px"><div style="font-size:13px;font-weight:700;color:var(--blue);min-width:20px;flex-shrink:0">1</div><p style="font-size:13px;color:var(--ink3);line-height:1.65">We review your message and come back within one business day.</p></div>
+        <div class="list-item" style="display:flex;gap:14px"><div style="font-size:13px;font-weight:700;color:var(--blue);min-width:20px;flex-shrink:0">2</div><p style="font-size:13px;color:var(--ink3);line-height:1.65">A short call to understand your requirements and assess whether Jaly is the right fit.</p></div>
+        <div class="list-item" style="display:flex;gap:14px"><div style="font-size:13px;font-weight:700;color:var(--blue);min-width:20px;flex-shrink:0">3</div><p style="font-size:13px;color:var(--ink3);line-height:1.65">If appropriate, we arrange a site visit and produce a system design. Paid engagement with a hardware rebate on proceeding.</p></div>
       </div>
     </div>
   </div>
-</div>
+</div></div>
 <footer>
   <div class="ft-i">
     <div class="ft-top">
@@ -205,14 +169,14 @@ footer{background:#040f24;padding:48px 0 28px}
         <p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p>
         <div class="ft-badge">Authorised Shelly B2B Distributor &mdash; Ireland</div>
       </div>
-      <div class="ft-col"><h5>Services</h5><ul>
-        <li><a href="what-we-do.html">System Design</a></li>
-        <li><a href="what-we-do.html">Hardware Supply</a></li>
-        <li><a href="what-we-do.html">Commissioning</a></li>
-      </ul></div>
-      <div class="ft-col"><h5>Explore</h5><ul>
+      <div class="ft-col"><h5>Company</h5><ul>
+        <li><a href="what-we-do.html">What We Do</a></li>
         <li><a href="use-cases.html">Use Cases</a></li>
         <li><a href="technology.html">Technology</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Trade</h5><ul>
+        <li><a href="installers.html">Installers</a></li>
+        <li><a href="distribution.html">Distribution</a></li>
       </ul></div>
       <div class="ft-col"><h5>Contact</h5><ul>
         <li><a href="contact.html">Get in Touch</a></li>

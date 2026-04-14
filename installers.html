@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Installers &mdash; Jaly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0a2d6b;--blue:#7799f3;--cyan:#5dc0e5;--white:#fff;--off:#f4f6fb;--ink:#0a0a0a;--ink2:#2a2a2a;--ink3:#555;--ink4:#999;--rule:#e2e6f0;--r:3px;--f:"Inter",system-ui,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--f);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{background:var(--navy);height:64px;padding:0}
+.nav-i{max-width:1040px;margin:0 auto;padding:0 48px;height:64px;display:flex;align-items:center}
+.n-logo{display:flex;align-items:center;text-decoration:none;flex-shrink:0}
+.n-links{flex:1;display:flex;justify-content:center;list-style:none}
+.n-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;padding:0 13px;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent;white-space:nowrap;transition:color 0.12s}
+.n-links a:hover{color:#fff}
+.n-links a.on{color:#fff;font-weight:600;border-bottom-color:var(--cyan)}
+.n-btn{background:var(--cyan);color:var(--navy);font-weight:700;font-size:13px;padding:0 18px;height:36px;display:inline-flex;align-items:center;border-radius:var(--r);text-decoration:none;flex-shrink:0}
+.hero{background:var(--navy);padding:72px 0 64px}
+.w{max-width:1040px;margin:0 auto;padding:0 48px}
+.kicker{font-size:11px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+h1{font-size:52px;font-weight:900;line-height:1.01;letter-spacing:-0.04em;color:#fff;margin-bottom:18px}
+.hero-2col{display:grid;grid-template-columns:1.2fr 0.8fr;gap:56px;align-items:center}
+.hero-desc{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.75;margin-bottom:28px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-c{background:var(--cyan);color:var(--navy);font-weight:700;font-size:13px;padding:11px 22px;border-radius:var(--r);text-decoration:none}
+.btn-g{border:1px solid rgba(255,255,255,0.22);color:rgba(255,255,255,0.65);font-size:13px;padding:11px 22px;border-radius:var(--r);text-decoration:none}
+.pbox{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:5px;padding:28px}
+.plbl{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:18px}
+.pbox img{height:90px;width:auto;display:block}
+.psub{font-size:13px;color:rgba(255,255,255,0.45);margin-top:16px;line-height:1.65}
+.val-band{border-bottom:1px solid var(--rule)}
+.val-grid{max-width:1040px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(4,1fr)}
+.val-cell{padding:26px 0 26px 28px;border-right:1px solid var(--rule)}
+.val-cell:first-child{padding-left:0}
+.val-cell:last-child{border-right:none}
+.val-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.val-body{font-size:13px;color:var(--ink3);line-height:1.6}
+.ph{padding:64px 0}
+h2{font-size:32px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);margin-bottom:12px}
+.sub{font-size:15px;color:var(--ink3);line-height:1.75;max-width:580px;margin-bottom:36px}
+.hr{height:1px;background:var(--rule)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--white);border:1px solid var(--rule);border-top:3px solid var(--blue);padding:26px}
+.card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.card p{font-size:13px;color:var(--ink3);line-height:1.65}
+.card .lnk{font-size:13px;color:var(--blue);font-weight:500;margin-top:12px}
+.card-off{background:var(--off);border:1px solid var(--rule);border-top:3px solid var(--navy);padding:26px}
+.card-off h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.card-off p{font-size:13px;color:var(--ink3);line-height:1.65}
+.tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule)}
+.tile{background:var(--white);padding:32px 28px;position:relative}
+.tile-top{position:absolute;top:0;left:0;right:0;height:3px;background:var(--navy)}
+.tile-num{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.tile h3{font-size:17px;font-weight:700;letter-spacing:-0.02em;color:var(--navy);margin-bottom:9px}
+.tile p{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:14px}
+.tile-det{font-size:12px;color:var(--ink4);line-height:1.65;border-top:1px solid var(--rule);padding-top:12px}
+.tile-det strong{color:var(--ink3)}
+.list-items{display:flex;flex-direction:column;gap:1px;background:var(--rule)}
+.list-item{background:var(--white);padding:14px 18px}
+.list-item p{font-size:13px;color:var(--ink2);line-height:1.65}
+.list-item strong{color:var(--navy)}
+.badge{display:inline-flex;padding:2px 10px;border-radius:100px;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px}
+.badge-navy{background:var(--navy);color:#fff}
+.badge-blue{background:var(--blue);color:#fff}
+.badge-cyan{background:var(--cyan);color:var(--navy)}
+.dark-band{background:var(--navy);padding:64px 0}
+.cta{background:var(--navy);padding:56px 0}
+.cta-i{max-width:1040px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.cta-i h2{font-size:26px;font-weight:800;letter-spacing:-0.03em;color:#fff;margin-bottom:8px}
+.cta-i p{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.65;max-width:400px}
+footer{background:#040f24;padding:48px 0 28px}
+.ft-i{max-width:1040px;margin:0 auto;padding:0 48px}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:20px}
+.ft-logo{display:block;margin-bottom:12px;text-decoration:none}
+.ft-tag{font-size:13px;color:rgba(255,255,255,0.3);line-height:1.65;max-width:210px;margin-bottom:16px}
+.ft-badge{display:inline-flex;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:100px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.ft-col h5{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:14px}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.ft-col a{font-size:13px;color:rgba(255,255,255,0.35);text-decoration:none}
+.ft-col a:hover{color:rgba(255,255,255,0.8)}
+.ft-bot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.ft-bot p{font-size:12px;color:rgba(255,255,255,0.16)}
+.f-grp{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f-lbl{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink4)}
+.f-inp,.f-sel,.f-ta{width:100%;background:var(--off);border:1px solid var(--rule);color:var(--ink);padding:10px 13px;font-family:var(--f);font-size:13px;border-radius:var(--r);outline:none}
+.f-inp:focus,.f-sel:focus,.f-ta:focus{border-color:var(--blue)}
+.f-ta{min-height:110px;resize:vertical}
+.f-sub{width:100%;background:var(--navy);color:#fff;border:none;padding:12px;font-family:var(--f);font-size:13px;font-weight:600;border-radius:var(--r);cursor:pointer;margin-top:4px}</style>
+</head>
+<body>
+<script src="nav.js"></script>
+
+<div class="hero"><div class="w">
+  <div class="hero-2col">
+    <div>
+      <p class="kicker">Shelly Approved Installer Programme</p>
+      <h1>Add Shelly to<br>your offer.<br>Get paid back.</h1>
+      <p class="hero-desc" style="max-width:420px">Installing Shelly gives your clients smarter, more energy-efficient buildings &mdash; and gives you a competitive edge, recurring revenue potential, and 10% cashback on qualifying projects through Shelly&rsquo;s official installer programme.</p>
+      <div class="btns">
+        <a href="https://www.shelly.com/pages/installers" target="_blank" class="btn-c">Register as an Installer &rarr;</a>
+        <a href="contact.html" class="btn-g">Talk to Jaly First</a>
+      </div>
+    </div>
+    <div>
+      <div style="background:rgba(93,192,229,0.12);border:2px solid var(--cyan);border-radius:5px;padding:28px">
+        <div style="font-size:56px;font-weight:900;letter-spacing:-0.05em;color:var(--cyan);line-height:1;margin-bottom:4px">10%</div>
+        <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:12px">Cashback on qualifying projects</div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.65">Available to registered installers who are verified, certified, and have showcased a completed project. Jaly can help you get set up.</p>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="ph"><div class="w">
+  <h2>Who this is for.</h2>
+  <p class="sub">Shelly devices are straightforward for any competent electrician or M&amp;E contractor to install. If you work in any of these areas, adding Shelly to your toolkit is a natural next step.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--rule);margin-bottom:56px">
+    <div style="background:var(--white);padding:32px 28px;border-top:3px solid var(--blue)">
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px">Electricians &amp; M&amp;E Contractors</h3>
+      <p style="font-size:12px;color:var(--ink4);margin-bottom:14px;font-style:italic">Domestic and commercial electrical installation</p>
+      <p style="font-size:13px;color:var(--ink3);line-height:1.65">You&rsquo;re already installing consumer units, lighting circuits, and heating controls. Shelly devices wire into the same infrastructure. Add smart controls to any job &mdash; new build or retrofit &mdash; with minimal additional time on site.</p>
+    </div>
+    <div style="background:var(--white);padding:32px 28px;border-top:3px solid var(--blue)">
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px">Solar &amp; Renewable Installers</h3>
+      <p style="font-size:12px;color:var(--ink4);margin-bottom:14px;font-style:italic">Solar PV, battery storage, heat pump installation</p>
+      <p style="font-size:13px;color:var(--ink3);line-height:1.65">Shelly energy meters and smart relays integrate directly with solar and battery systems. Give your clients visibility of generation vs consumption, automated immersion control, and optimised self-consumption.</p>
+    </div>
+    <div style="background:var(--white);padding:32px 28px;border-top:3px solid var(--blue)">
+      <h3 style="font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px">Energy &amp; BMS Contractors</h3>
+      <p style="font-size:12px;color:var(--ink4);margin-bottom:14px;font-style:italic">Commercial energy auditors, BMS integrators, facilities contractors</p>
+      <p style="font-size:13px;color:var(--ink3);line-height:1.65">Shelly&rsquo;s open API connects with virtually any existing system. Deploy meters, relays, and sensors across a commercial estate with Fleet Manager handling configuration at scale.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-bottom:12px">Why install Shelly.</h2>
+  <p class="sub">The case for your business and for your clients.</p>
+  <div class="two" style="margin-bottom:56px">
+    <div>
+      <p style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:16px">For Your Business</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule)">
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">Expand Your Offer</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">Smart controls are increasingly expected by clients. Offering Shelly positions you ahead of competitors doing dumb installs.</p></div>
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">10% Cashback</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">Qualifying projects earn 10% back on device costs. Real money on larger commercial jobs.</p></div>
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">Local Stock</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">Order from Jaly with local Irish stock and fast turnaround. No waiting on European warehouses.</p></div>
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">Technical Support</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">Jaly installs these systems too. If you hit an issue on site, you&rsquo;re talking to someone who has done the same job.</p></div>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:16px">For Your Clients</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule)">
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">Energy Savings</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">Metering identifies waste. Automation eliminates it. Clients see measurable reductions from day one.</p></div>
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">No Subscription</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">No monthly fees. No cloud dependency. The system works locally and continues working regardless.</p></div>
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">Easy to Use</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">The Shelly app is straightforward. Automations run in the background. Clients don&rsquo;t need to manage it.</p></div>
+        <div style="background:var(--white);padding:22px"><h3 style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px">Future-Proof</h3><p style="font-size:13px;color:var(--ink3);line-height:1.6">Open API means the system integrates with future technologies as clients&rsquo; needs evolve.</p></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dark-band"><div class="w">
+  <p class="kicker" style="margin-bottom:14px">Shelly Installer Programme</p>
+  <h2 style="color:#fff;margin-bottom:12px">How the 10% cashback works.</h2>
+  <p style="font-size:15px;color:rgba(255,255,255,0.55);line-height:1.75;max-width:600px;margin-bottom:36px">Shelly&rsquo;s official installer programme rewards qualified installers with 10% back on devices used in showcased projects. Jaly can help you through the process.</p>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,0.08);margin-bottom:16px">
+    <div style="background:rgba(255,255,255,0.04);padding:28px 24px"><div style="font-size:28px;font-weight:900;color:var(--cyan);letter-spacing:-0.04em;margin-bottom:12px">01</div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px">Register on the Portal</h3><p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6">Sign up at shelly.com/pages/installers. Free to join.</p></div>
+    <div style="background:rgba(255,255,255,0.04);padding:28px 24px"><div style="font-size:28px;font-weight:900;color:var(--cyan);letter-spacing:-0.04em;margin-bottom:12px">02</div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px">Get Verified &amp; Certified</h3><p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6">Complete the self-paced online training. Score 80% or above to unlock your certification badge instantly.</p></div>
+    <div style="background:rgba(255,255,255,0.04);padding:28px 24px"><div style="font-size:28px;font-weight:900;color:var(--cyan);letter-spacing:-0.04em;margin-bottom:12px">03</div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px">Complete a Project</h3><p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6">Install Shelly devices and showcase the project through the installer portal. Residential or commercial both qualify.</p></div>
+    <div style="background:rgba(255,255,255,0.04);padding:28px 24px"><div style="font-size:28px;font-weight:900;color:var(--cyan);letter-spacing:-0.04em;margin-bottom:12px">04</div><h3 style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px">Receive 10% Cashback</h3><p style="font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6">10% back on the Shelly devices used in your showcased project.</p></div>
+  </div>
+  <p style="font-size:11px;color:rgba(255,255,255,0.2)">Programme details are managed by Shelly directly. Contact Jaly for guidance on registration.</p>
+</div></div>
+
+<div class="ph" style="background:var(--off)"><div class="w">
+  <div class="two">
+    <div>
+      <h2 style="margin-bottom:16px">How Jaly supports installers.</h2>
+      <p style="font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:24px">We&rsquo;re not just a distributor. Jaly installs and commissions Shelly systems. When you buy from us, you have access to a team that has done the same work you&rsquo;re doing.</p>
+      <a href="contact.html" class="btn-c" style="display:inline-block">Register Your Interest &rarr;</a>
+    </div>
+    <div class="list-items">
+      <div class="list-item"><p><strong>Local Irish stock</strong> &mdash; order and receive quickly, no European lead times on project hardware</p></div>
+      <div class="list-item"><p><strong>Volume pricing</strong> &mdash; trade pricing on committed order sizes, not just one-off purchases</p></div>
+      <div class="list-item"><p><strong>Technical support</strong> &mdash; call or email a team that installs the same products</p></div>
+      <div class="list-item"><p><strong>Installer programme guidance</strong> &mdash; we can walk you through registering for the Shelly cashback programme</p></div>
+      <div class="list-item"><p><strong>Wiring diagrams and documentation</strong> &mdash; spec sheets and installation guides for every product we supply</p></div>
+      <div class="list-item"><p><strong>Referral opportunities</strong> &mdash; registered installer partners are our first call when we receive enquiries we can&rsquo;t take on directly</p></div>
+    </div>
+  </div>
+</div></div>
+<div class="cta"><div class="cta-i">
+  <div><h2 style="color:#fff">Ready to add Shelly to your offer?</h2><p>Get in touch and we will help you get set up &mdash; hardware pricing, installer programme registration, and technical support all in one place.</p></div>
+  <a href="contact.html" class="btn-c">Get in Touch &rarr;</a>
+</div></div>
+<footer>
+  <div class="ft-i">
+    <div class="ft-top">
+      <div>
+        <a href="index.html" class="ft-logo"><svg id="Layer_1" width="88" height="38" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 209.78 92.44">
+  <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.3 Build 182)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #3fc2e7;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .st1 {
+        fill: #ffffff;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 70.54px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M82.33,46.22c0-19.32-15.68-35-35-35S12.33,26.9,12.33,46.22s15.68,35,35,35,35-15.68,35-35"/>
+  <text class="st1" transform="translate(101.33 66.92)"><tspan x="0" y="0">jaly</tspan></text>
+</svg></a>
+        <p class="ft-tag">Intelligent building systems designed, supplied, and commissioned across Ireland.</p>
+        <div class="ft-badge">Authorised Shelly B2B Distributor &mdash; Ireland</div>
+      </div>
+      <div class="ft-col"><h5>Company</h5><ul>
+        <li><a href="what-we-do.html">What We Do</a></li>
+        <li><a href="use-cases.html">Use Cases</a></li>
+        <li><a href="technology.html">Technology</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Trade</h5><ul>
+        <li><a href="installers.html">Installers</a></li>
+        <li><a href="distribution.html">Distribution</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="mailto:info@jaly.ie">info@jaly.ie</a></li>
+        <li><a href="https://www.jaly.ie">www.jaly.ie</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>&copy; 2025 Jaly.ie</p>
+      <p>Authorised Shelly distributor &mdash; Republic and Northern Ireland</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
